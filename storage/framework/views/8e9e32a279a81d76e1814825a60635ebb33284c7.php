@@ -1,9 +1,9 @@
  <?php $__env->startSection('content'); ?>
 <?php if(session()->has('message')): ?>
-  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo session()->get('message'); ?></div> 
+  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo session()->get('message'); ?></div>
 <?php endif; ?>
 <?php if(session()->has('not_permitted')): ?>
-  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div> 
+  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div>
 <?php endif; ?>
 
 <section>
@@ -26,7 +26,7 @@
             </thead>
             <tbody>
                 <?php $__currentLoopData = $lims_attendance_all; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$attendance): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php 
+                <?php
                     $employee = \App\Employee::find($attendance->employee_id);
                     $user = \App\User::find($attendance->user_id);
                 ?>
@@ -120,13 +120,13 @@
 
     var attendance_id = [];
     var user_verified = <?php echo json_encode(env('USER_VERIFIED')) ?>;
-    
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    
+
 	var date = $('.date');
     date.datepicker({
      format: "dd-mm-yyyy",
@@ -238,4 +238,5 @@
 </script>
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/attendance/index.blade.php ENDPATH**/ ?>

@@ -88,11 +88,12 @@
         <a class="color dark-theme" title="dark" data-color="dark.css"></a>
     </div>
 </div> -->
+
 @if(session()->has('not_permitted'))
-  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('not_permitted') }}</div> 
+  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('not_permitted') }}</div>
 @endif
 @if(session()->has('message'))
-  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('message') }}</div> 
+  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('message') }}</div>
 @endif
       <div class="row">
         <div class="container-fluid">
@@ -100,18 +101,18 @@
             <div class="brand-text float-left mt-4">
                 <h3>{{trans('file.welcome')}} <span>{{Auth::user()->name}}</span> </h3>
             </div>
-            <div class="filter-toggle btn-group">
+            {{-- <div class="filter-toggle btn-group">
               <button class="btn btn-secondary date-btn" data-start_date="{{date('Y-m-d')}}" data-end_date="{{date('Y-m-d')}}">{{trans('file.Today')}}</button>
               <button class="btn btn-secondary date-btn" data-start_date="{{date('Y-m-d', strtotime(' -7 day'))}}" data-end_date="{{date('Y-m-d')}}">{{trans('file.Last 7 Days')}}</button>
               <button class="btn btn-secondary date-btn active" data-start_date="{{date('Y').'-'.date('m').'-'.'01'}}" data-end_date="{{date('Y-m-d')}}">{{trans('file.This Month')}}</button>
               <button class="btn btn-secondary date-btn" data-start_date="{{date('Y').'-01'.'-01'}}" data-end_date="{{date('Y').'-12'.'-31'}}">{{trans('file.This Year')}}</button>
-            </div>
+            </div> --}}
           </div>
         </div>
       </div>
       <!-- Counts Section -->
       <section class="dashboard-counts">
-        <div class="container-fluid">
+        {{-- <div class="container-fluid">
           <div class="row">
             <div class="col-md-12 form-group">
               <div class="row">
@@ -189,7 +190,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -239,9 +240,9 @@
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($recent_sale as $sale)
-                            <?php $customer = DB::table('customers')->find($sale->customer_id); ?>
-                            <tr>
+                            @foreach($recent_sale as $sale) --}}
+                            <?php // $customer = DB::table('customers')->find($sale->customer_id); ?>
+                            {{-- <tr>
                               <td>{{ date($general_setting->date_format, strtotime($sale->created_at->toDateString())) }}</td>
                               <td>{{$sale->reference_no}}</td>
                               <td>{{$customer->name}}</td>
@@ -272,9 +273,9 @@
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($recent_purchase as $purchase)
-                            <?php $supplier = DB::table('suppliers')->find($purchase->supplier_id); ?>
-                            <tr>
+                            @foreach($recent_purchase as $purchase) --}}
+                            <?php //$supplier = DB::table('suppliers')->find($purchase->supplier_id); ?>
+                            {{-- <tr>
                               <td>{{date($general_setting->date_format, strtotime($purchase->created_at->toDateString())) }}</td>
                               <td>{{$purchase->reference_no}}</td>
                               @if($supplier)
@@ -311,9 +312,9 @@
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($recent_quotation as $quotation)
-                            <?php $customer = DB::table('customers')->find($quotation->customer_id); ?>
-                            <tr>
+                            @foreach($recent_quotation as $quotation) --}}
+                            <?php //$customer = DB::table('customers')->find($quotation->customer_id); ?>
+                            {{-- <tr>
                               <td>{{date($general_setting->date_format, strtotime($quotation->created_at->toDateString())) }}</td>
                               <td>{{$quotation->reference_no}}</td>
                               <td>{{$customer->name}}</td>
@@ -374,9 +375,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($best_selling_qty as $key=>$sale)
-                        <?php $product = DB::table('products')->find($sale->product_id); ?>
-                        <tr>
+                        @foreach($best_selling_qty as $key=>$sale) --}}
+                        <?php //$product = DB::table('products')->find($sale->product_id); ?>
+                        {{-- <tr>
                           <td>{{$key + 1}}</td>
                           <td>{{$product->name}}<br>[{{$product->code}}]</td>
                           <td>{{$sale->sold_qty}}</td>
@@ -405,9 +406,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($yearly_best_selling_qty as $key => $sale)
-                        <?php $product = DB::table('products')->find($sale->product_id); ?>
-                        <tr>
+                        @foreach($yearly_best_selling_qty as $key => $sale) --}}
+                        <?php //$product = DB::table('products')->find($sale->product_id); ?>
+                        {{-- <tr>
                           <td>{{$key + 1}}</td>
                           <td>{{$product->name}}<br>[{{$product->code}}]</td>
                           <td>{{$sale->sold_qty}}</td>
@@ -436,9 +437,9 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($yearly_best_selling_price as $key => $sale)
-                        <?php $product = DB::table('products')->find($sale->product_id); ?>
-                        <tr>
+                        @foreach($yearly_best_selling_price as $key => $sale) --}}
+                        <?php //$product = DB::table('products')->find($sale->product_id); ?>
+                        {{-- <tr>
                           <td>{{$key + 1}}</td>
                           <td>{{$product->name}}<br>[{{$product->code}}]</td>
                           <td>{{number_format((float)$sale->total_price, 2, '.', '')}}</td>
@@ -450,9 +451,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </section>
-      
+
 <script type="text/javascript">
     // Show and hide color-switcher
     $(".color-switcher .switcher-button").on('click', function() {

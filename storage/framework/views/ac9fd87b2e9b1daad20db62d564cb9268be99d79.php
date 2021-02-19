@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
 <?php if(session()->has('message')): ?>
-  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('message')); ?></div> 
+  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('message')); ?></div>
 <?php endif; ?>
 <?php if(session()->has('not_permitted')): ?>
-  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div> 
+  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div>
 <?php endif; ?>
 
 <section>
@@ -39,7 +39,7 @@
                     	 	if($key)
                     	 		echo '<br>';
                     	 	echo $product->name;
-                    	 } 
+                    	 }
                     ?>
                     </td>
                     <td><?php echo e($adjustment->note); ?></td>
@@ -49,7 +49,7 @@
                             </button>
                             <ul class="dropdown-menu edit-options dropdown-menu-right dropdown-default" user="menu">
                                 <li>
-                                    <a href="<?php echo e(route('qty_adjustment.edit', $adjustment->id)); ?>" class="btn btn-link"><i class="dripicons-document-edit"></i> <?php echo e(trans('file.edit')); ?></a> 
+                                    <a href="<?php echo e(route('qty_adjustment.edit', $adjustment->id)); ?>" class="btn btn-link"><i class="dripicons-document-edit"></i> <?php echo e(trans('file.edit')); ?></a>
                                 </li>
                                 <li class="divider"></li>
                                 <?php echo e(Form::open(['route' => ['qty_adjustment.destroy', $adjustment->id], 'method' => 'DELETE'] )); ?>
@@ -183,4 +183,6 @@
     } );
 </script>
 <?php $__env->stopSection(); ?>
+
+
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/adjustment/index.blade.php ENDPATH**/ ?>

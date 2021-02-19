@@ -14,6 +14,6 @@ class Unit extends Model
     public function product()
     {
     	return $this->hasMany('App/Product');
-    	
+
     }
 }

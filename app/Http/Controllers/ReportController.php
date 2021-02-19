@@ -228,7 +228,7 @@ class ReportController extends Controller
     }
 
     public function dailyPurchaseByWarehouse(Request $request, $year, $month)
-    {        
+    {
         $data = $request->all();
         if($data['warehouse_id'] == 0)
             return redirect()->back();
@@ -363,7 +363,7 @@ class ReportController extends Controller
                     'SUM(grand_total) AS grand_total'
                 );
                 $purchase_data = Purchase::whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->selectRaw(implode(',', $query1))->get();
-                
+
                 $total_discount[] = number_format((float)$purchase_data[0]->total_discount, 2, '.', '');
                 $order_discount[] = number_format((float)$purchase_data[0]->order_discount, 2, '.', '');
                 $total_tax[] = number_format((float)$purchase_data[0]->total_tax, 2, '.', '');
@@ -402,7 +402,7 @@ class ReportController extends Controller
                 'SUM(grand_total) AS grand_total'
             );
             $purchase_data = Purchase::where('warehouse_id', $data['warehouse_id'])->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->selectRaw(implode(',', $query1))->get();
-            
+
             $total_discount[] = number_format((float)$purchase_data[0]->total_discount, 2, '.', '');
             $order_discount[] = number_format((float)$purchase_data[0]->order_discount, 2, '.', '');
             $total_tax[] = number_format((float)$purchase_data[0]->total_tax, 2, '.', '');
@@ -422,7 +422,7 @@ class ReportController extends Controller
         if($role->hasPermissionTo('best-seller')){
             $start = strtotime(date("Y-m", strtotime("-2 months")).'-01');
             $end = strtotime(date("Y").'-'.date("m").'-31');
-            
+
             while($start <= $end)
             {
                 $start_date = date("Y-m", $start).'-'.'01';
@@ -465,7 +465,7 @@ class ReportController extends Controller
 
             $best_selling_qty = DB::table('sales')
                                 ->join('product_sales', 'sales.id', '=', 'product_sales.sale_id')->select(DB::raw('product_sales.product_id, sum(product_sales.qty) as sold_qty'))->where('sales.warehouse_id', $data['warehouse_id'])->whereDate('sales.created_at', '>=' , $start_date)->whereDate('sales.created_at', '<=' , $end_date)->groupBy('product_id')->orderBy('sold_qty', 'desc')->take(1)->get();
-                                
+
             if(!count($best_selling_qty)) {
                 $product[] = '';
                 $sold_qty[] = 0;
@@ -615,7 +615,7 @@ class ReportController extends Controller
                           ->whereDate('purchases.created_at','<=', $end_date)
                           ->first();
             }
-            
+
             if($lims_product_purchase_data) {
                 $product_name[] = $product->name;
                 $product_id[] = $product->id;
@@ -642,7 +642,7 @@ class ReportController extends Controller
                                         ['variant_id', $variant_data->id],
                                         ['warehouse_id', $warehouse_id]
                                     ])->first()->qty;
-                    
+
                 }
             }
 
@@ -703,7 +703,7 @@ class ReportController extends Controller
                                             ['variant_id', $variant_data->id],
                                             ['warehouse_id', $warehouse_id]
                                         ])->first()->qty;
-                        
+
                     }
                 }
             }
@@ -779,7 +779,7 @@ class ReportController extends Controller
                                         ['variant_id', $variant_data->id],
                                         ['warehouse_id', $warehouse_id]
                                     ])->first()->qty;
-                    
+
                 }
             }
         }
@@ -798,7 +798,7 @@ class ReportController extends Controller
         $product_name = [];
         $product_qty = [];
         $lims_product_all = Product::select('id', 'name', 'qty', 'is_variant')->where('is_active', true)->get();
-        
+
         foreach ($lims_product_all as $product) {
             $lims_product_sale_data = null;
             $variant_id_all = [];
@@ -855,7 +855,7 @@ class ReportController extends Controller
                                         ['variant_id', $variant_data->id],
                                         ['warehouse_id', $warehouse_id]
                                     ])->first()->qty;
-                    
+
                 }
             }
         }
@@ -868,7 +868,7 @@ class ReportController extends Controller
         $data = $request->all();
         $start_date = $data['start_date'];
         $end_date = $data['end_date'];
-        
+
         $lims_payment_data = Payment::whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->get();
         return view('report.payment_report',compact('lims_payment_data', 'start_date', 'end_date'));
     }
@@ -919,9 +919,9 @@ class ReportController extends Controller
         $lims_product_transfer_data = [];
 
         $lims_sale_data = Sale::with('customer', 'warehouse')->where('user_id', $user_id)->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->orderBy('created_at', 'desc')->get();
-        $lims_purchase_data = Purchase::with('warehouse')->where('user_id', $user_id)->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->orderBy('created_at', 'desc')->get();        
+        $lims_purchase_data = Purchase::with('warehouse')->where('user_id', $user_id)->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->orderBy('created_at', 'desc')->get();
         $lims_quotation_data = Quotation::with('customer', 'warehouse')->where('user_id', $user_id)->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->orderBy('created_at', 'desc')->get();
-        $lims_transfer_data = Transfer::with('fromWarehouse', 'toWarehouse')->where('user_id', $user_id)->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->orderBy('created_at', 'desc')->get();        
+        $lims_transfer_data = Transfer::with('fromWarehouse', 'toWarehouse')->where('user_id', $user_id)->whereDate('created_at', '>=' , $start_date)->whereDate('created_at', '<=' , $end_date)->orderBy('created_at', 'desc')->get();
         $lims_payment_data = DB::table('payments')
                            ->where('user_id', $user_id)
                            ->whereDate('payments.created_at', '>=' , $start_date)
