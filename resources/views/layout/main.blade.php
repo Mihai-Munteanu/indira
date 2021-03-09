@@ -520,7 +520,7 @@
                                         @endif
 
                                         @if($supplier_index_permission_active)
-                                            {{-- <li id="supplier-list-menu"><a href="{{route('supplier.index')}}">{{trans('file.Supplier List')}}</a></li> --}}
+                                            <li id="supplier-list-menu"><a href="{{route('supplier.index')}}">{{trans('file.Supplier List')}}</a></li>
                                             <?php
                                                 $supplier_add_permission = DB::table('permissions')->where('name', 'suppliers-add')->first();
                                                 $supplier_add_permission_active = DB::table('role_has_permissions')->where([

@@ -44,11 +44,14 @@ class ProductController extends Controller
         $columns = array(
             2 => 'name',
             3 => 'code',
-            4 => 'brand_id',
-            5 => 'category_id',
-            6 => 'qty',
-            7 => 'unit_id',
-            8 => 'price'
+            4 => 'supplier_id',
+            5 => 'supplier_sku_code',
+            6 => 'url',
+            7 => 'category_id',
+            8 => 'qty',
+            9 => 'cost',
+            10 => 'unit_id',
+            11 => 'price',
         );
 
         $totalData = Product::where('is_active', true)->count();
@@ -62,19 +65,20 @@ class ProductController extends Controller
         $order = 'products.'.$columns[$request->input('order.0.column')];
         $dir = $request->input('order.0.dir');
         if(empty($request->input('search.value'))){
-            $products = Product::with('category', 'brand', 'unit')->offset($start)
+            $products = Product::with('category', 'supplier', 'unit')
+                        ->offset($start)
                         ->where('is_active', true)
                         ->limit($limit)
-                        ->orderBy($order,$dir)
+                        ->orderBy($order, $dir)
                         ->get();
         }
         else
         {
             $search = $request->input('search.value');
             $products =  Product::select('products.*')
-                        ->with('category', 'brand', 'unit')
-                        ->join('categories', 'products.category_id', '=', 'categories.id')
-                        ->leftjoin('brands', 'products.brand_id', '=', 'brands.id')
+                        ->with('category', 'supplier', 'unit')
+                        ->leftJoin('categories', 'products.category_id', '=', 'categories.id')
+                        ->leftJoin('suppliers', 'products.supplier_id', '=', 'suppliers.id')
                         ->where([
                             ['products.name', 'LIKE', "%{$search}%"],
                             ['products.is_active', true]
@@ -84,28 +88,54 @@ class ProductController extends Controller
                             ['products.is_active', true]
                         ])
                         ->orWhere([
+                            ['suppliers.name', 'LIKE', "%{$search}%"],
+                            ['suppliers.is_active', true]
+                        ])
+                        ->orWhere([
+                            ['products.supplier_sku_code', 'LIKE', "%{$search}%"],
+                            ['products.is_active', true]
+                        ])
+                        ->orWhere([
+                            ['products.url', 'LIKE', "%{$search}%"],
+                            ['products.is_active', true]
+                        ])
+                        ->orWhere([
                             ['categories.name', 'LIKE', "%{$search}%"],
                             ['categories.is_active', true],
                             ['products.is_active', true]
                         ])
                         ->orWhere([
-                            ['brands.title', 'LIKE', "%{$search}%"],
-                            ['brands.is_active', true],
+                            ['products.cost', 'LIKE', "%{$search}%"],
+                            ['products.is_active', true]
+                        ])
+                        ->orWhere([
+                            ['products.price', 'LIKE', "%{$search}%"],
                             ['products.is_active', true]
                         ])
                         ->offset($start)
                         ->limit($limit)
                         ->orderBy($order,$dir)->get();
 
-            $totalFiltered = Product::
-                            join('categories', 'products.category_id', '=', 'categories.id')
-                            ->leftjoin('brands', 'products.brand_id', '=', 'brands.id')
+            $totalFiltered = Product::join('categories', 'products.category_id', '=', 'categories.id')
+                            ->leftJoin('suppliers', 'products.supplier_id', '=', 'suppliers.id')
                             ->where([
-                                ['products.name','LIKE',"%{$search}%"],
+                                ['products.name', 'LIKE', "%{$search}%"],
                                 ['products.is_active', true]
                             ])
                             ->orWhere([
                                 ['products.code', 'LIKE', "%{$search}%"],
+                                ['products.is_active', true]
+                            ])
+                            ->orWhere([
+                                ['suppliers.name', 'LIKE', "%{$search}%"],
+                                ['suppliers.is_active', true]
+                            ])
+                            ->orWhere([
+                                ['products.supplier_sku_code', 'LIKE', "%{$search}%"],
+                                ['products.is_active', true]
+                            ])
+                            ->orWhere([
+                                ['products.url', 'LIKE', "%{$search}%"],
                                 ['products.is_active', true]
                             ])
                             ->orWhere([
@@ -114,15 +144,20 @@ class ProductController extends Controller
                                 ['products.is_active', true]
                             ])
                             ->orWhere([
-                                ['brands.title', 'LIKE', "%{$search}%"],
-                                ['brands.is_active', true],
+                                ['products.cost', 'LIKE', "%{$search}%"],
+                                ['products.is_active', true]
+                            ])
+                            ->orWhere([
+                                ['products.price', 'LIKE', "%{$search}%"],
                                 ['products.is_active', true]
                             ])
                             ->count();
         }
         $data = array();
+
         if(!empty($products))
         {
+//*to do; nu inteleg de ce nu pot sa dau dd aici sau in alta parte.
             foreach ($products as $key=>$product)
             {
                 $nestedData['id'] = $product->id;
@@ -132,18 +167,32 @@ class ProductController extends Controller
                 $nestedData['image'] = '<img src="'.url('public/images/product', $product_image).'" height="80" width="80">';
                 $nestedData['name'] = $product->name;
                 $nestedData['code'] = $product->code;
-                if($product->brand_id)
-                    $nestedData['brand'] = $product->brand->title;
-                else
-                    $nestedData['brand'] = "N/A";
+
+                //*to do; nu am reusit sa fac link intre tabelul de suppliers si product pentru a afisa numele in loc de id;
+                $nestedData['supplier'] = $product->supplier_id;
+
+                $nestedData['supplier_sku'] = $product->supplier_sku_code;
+                $nestedData['url'] = $product->url;
+                //*to do; nu inteleg cum a facut legatura intre tabelul de $products si category fara sa foloseasca category_id;
                 $nestedData['category'] = $product->category->name;
                 $nestedData['qty'] = $product->qty;
+                $nestedData['cost'] = $product->cost;
+
+
+// am sters brand si de mai jos $nestedData;
+                // if($product->brand_id)
+                //     $nestedData['brand'] = $product->brand->title;
+                // else
+                //     $nestedData['brand'] = "N/A";
+                // $nestedData['category'] = $product->category->name;
+
                 if($product->unit_id)
                     $nestedData['unit'] = $product->unit->unit_name;
                 else
                     $nestedData['unit'] = 'N/A';
 
                 $nestedData['price'] = $product->price;
+
                 $nestedData['options'] = '<div class="btn-group">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.trans("file.action").'
                               <span class="caret"></span>
@@ -175,7 +224,7 @@ class ProductController extends Controller
                 else
                     $tax_method = trans('file.Inclusive');
 
-                $nestedData['product'] = array( '[ "'.$product->type.'"', ' "'.$product->name.'"', ' "'.$product->code.'"', ' "'.$nestedData['brand'].'"', ' "'.$nestedData['category'].'"', ' "'.$nestedData['unit'].'"', ' "'.$product->cost.'"', ' "'.$product->price.'"', ' "'.$tax.'"', ' "'.$tax_method.'"', ' "'.$product->alert_quantity.'"', ' "'.preg_replace('/\s+/S', " ", $product->product_details).'"', ' "'.$product->id.'"', ' "'.$product->product_list.'"', ' "'.$product->qty_list.'"', ' "'.$product->price_list.'"', ' "'.$product->qty.'"', ' "'.$product->image.'"]'
+                $nestedData['product'] = array( '[ "'.$product->type.'"', ' "'.$product->name.'"', ' "'.$product->code.'"', ' "'.$nestedData['category'].'"', ' "'.$nestedData['unit'].'"', ' "'.$product->cost.'"', ' "'.$product->price.'"', ' "'.$tax.'"', ' "'.$tax_method.'"', ' "'.$product->alert_quantity.'"', ' "'.preg_replace('/\s+/S', " ", $product->product_details).'"', ' "'.$product->id.'"', ' "'.$product->product_list.'"', ' "'.$product->qty_list.'"', ' "'.$product->price_list.'"', ' "'.$product->qty.'"', ' "'.$product->image.'"]'
                 );
                 //$nestedData['imagedata'] = DNS1D::getBarcodePNG($product->code, $product->barcode_symbology);
                 $data[] = $nestedData;

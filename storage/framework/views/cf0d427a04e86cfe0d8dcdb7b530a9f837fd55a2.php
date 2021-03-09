@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <?php if(in_array("purchases-add", $all_permission)): ?>
             <a href="<?php echo e(route('purchases.create')); ?>" class="btn btn-info"><i class="dripicons-plus"></i> <?php echo e(trans('file.Add Purchase')); ?></a>&nbsp;
-            <a href="<?php echo e(url('purchases/purchase_by_csv')); ?>" class="btn btn-primary"><i class="dripicons-copy"></i> <?php echo e(trans('file.Import Purchase')); ?></a>
+            
         <?php endif; ?>
     </div>
     <div class="table-responsive">
@@ -19,21 +19,29 @@
             <thead>
                 <tr>
                     <th class="not-exported"></th>
-                    <th><?php echo e(trans('file.Date')); ?></th>
-                    <th><?php echo e(trans('file.reference')); ?></th>
-                    <th><?php echo e(trans('file.Supplier')); ?></th>
-                    <th><?php echo e(trans('file.Purchase Status')); ?></th>
-                    <th><?php echo e(trans('file.grand total')); ?></th>
-                    <th><?php echo e(trans('file.Paid')); ?></th>
-                    <th><?php echo e(trans('file.Due')); ?></th>
-                    <th><?php echo e(trans('file.Payment Status')); ?></th>
+                    <th><?php echo e(trans('Date')); ?></th>
+                    <th><?php echo e(trans('Reference')); ?></th>
+                    <th><?php echo e(trans('Supplier')); ?></th>
+                    <th><?php echo e(trans('Currency')); ?></th>
+                    <th><?php echo e(trans('Estimated Delivery Date')); ?></th>
+                    <th><?php echo e(trans('Shipping Cost')); ?></th>
+                    <th><?php echo e(trans('Total, Tax Excluded')); ?></th>
+                    <th><?php echo e(trans('Total Tax')); ?></th>
+                    <th><?php echo e(trans('Customs Fee')); ?></th>
+                    <th><?php echo e(trans('Total Cost')); ?></th>
+                    <th><?php echo e(trans('Grand Total')); ?></th>
                     <th class="not-exported"><?php echo e(trans('file.action')); ?></th>
+                    
+                    
                 </tr>
             </thead>
 
             <tfoot class="tfoot active">
                 <th></th>
                 <th><?php echo e(trans('file.Total')); ?></th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -475,11 +483,14 @@
             {"data": "date"},
             {"data": "reference_no"},
             {"data": "supplier"},
-            {"data": "purchase_status"},
+            {"data": "currency"},
+            {"data": "estimated_delivery_date"},
+            {"data": "shipping_cost"},
+            {"data": "total_tax_exluded"},
+            {"data": "total_tax"},
+            {"data": "customs_fee"},
+            {"data": "total_cost"},
             {"data": "grand_total"},
-            {"data": "paid_amount"},
-            {"data": "due"},
-            {"data": "payment_status"},
             {"data": "options"},
         ],
         'language': {
@@ -496,7 +507,7 @@
         'columnDefs': [
             {
                 "orderable": false,
-                'targets': [0, 3, 4, 7, 8,9]
+                'targets': [0, 1, 12]
             },
             {
                 'render': function(data, type, row, meta){
@@ -608,14 +619,24 @@
         if (dt_selector.rows( '.selected' ).any() && is_calling_first) {
             var rows = dt_selector.rows( '.selected' ).indexes();
 
-            $( dt_selector.column( 5 ).footer() ).html(dt_selector.cells( rows, 5, { page: 'current' } ).data().sum().toFixed(2));
+
             $( dt_selector.column( 6 ).footer() ).html(dt_selector.cells( rows, 6, { page: 'current' } ).data().sum().toFixed(2));
             $( dt_selector.column( 7 ).footer() ).html(dt_selector.cells( rows, 7, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 8 ).footer() ).html(dt_selector.cells( rows, 8, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 9 ).footer() ).html(dt_selector.cells( rows, 9, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 10 ).footer() ).html(dt_selector.cells( rows, 10, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 11 ).footer() ).html(dt_selector.cells( rows, 11, { page: 'current' } ).data().sum().toFixed(2));
+
         }
         else {
-            $( dt_selector.column( 5 ).footer() ).html(dt_selector.column( 5, {page:'current'} ).data().sum().toFixed(2));
+
             $( dt_selector.column( 6 ).footer() ).html(dt_selector.column( 6, {page:'current'} ).data().sum().toFixed(2));
             $( dt_selector.column( 7 ).footer() ).html(dt_selector.column( 7, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 8 ).footer() ).html(dt_selector.column( 8, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 9 ).footer() ).html(dt_selector.column( 9, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 10 ).footer() ).html(dt_selector.column( 10, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 11 ).footer() ).html(dt_selector.column( 11, {page:'current'} ).data().sum().toFixed(2));
+
         }
     }
 

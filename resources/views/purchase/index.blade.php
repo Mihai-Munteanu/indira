@@ -1,4 +1,3 @@
-
 @extends('layout.main') @section('content')
 @if(session()->has('message'))
   <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ session()->get('message') }}</div>
@@ -11,7 +10,7 @@
     <div class="container-fluid">
         @if(in_array("purchases-add", $all_permission))
             <a href="{{route('purchases.create')}}" class="btn btn-info"><i class="dripicons-plus"></i> {{trans('file.Add Purchase')}}</a>&nbsp;
-            <a href="{{url('purchases/purchase_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Purchase')}}</a>
+            {{-- <a href="{{url('purchases/purchase_by_csv')}}" class="btn btn-primary"><i class="dripicons-copy"></i> {{trans('file.Import Purchase')}}</a> --}}
         @endif
     </div>
     <div class="table-responsive">
@@ -20,21 +19,31 @@
             <thead>
                 <tr>
                     <th class="not-exported"></th>
-                    <th>{{trans('file.Date')}}</th>
-                    <th>{{trans('file.reference')}}</th>
-                    <th>{{trans('file.Supplier')}}</th>
-                    <th>{{trans('file.Purchase Status')}}</th>
-                    <th>{{trans('file.grand total')}}</th>
-                    <th>{{trans('file.Paid')}}</th>
-                    <th>{{trans('file.Due')}}</th>
-                    <th>{{trans('file.Payment Status')}}</th>
+                    <th>{{trans('Date')}}</th>
+                    <th>{{trans('Reference')}}</th>
+                    <th>{{trans('Supplier')}}</th>
+                    <th>{{trans('Currency')}}</th>
+                    <th>{{trans('Estimated Delivery Date')}}</th>
+                    <th>{{trans('Shipping Cost')}}</th>
+                    <th>{{trans('Total, Tax Excluded')}}</th>
+                    <th>{{trans('Total Tax')}}</th>
+                    <th>{{trans('Customs Fee')}}</th>
+                    <th>{{trans('Total Cost')}}</th>
+                    <th>{{trans('Grand Total')}}</th>
                     <th class="not-exported">{{trans('file.action')}}</th>
+                    {{-- <th>{{trans('Purchase Status')}}</th> --}}
+                    {{-- <th>{{trans('Paid')}}</th>
+                    <th>{{trans('Due')}}</th>
+                    <th>{{trans('file.Payment Status')}}</th> --}}
                 </tr>
             </thead>
 
             <tfoot class="tfoot active">
                 <th></th>
                 <th>{{trans('file.Total')}}</th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -472,11 +481,14 @@
             {"data": "date"},
             {"data": "reference_no"},
             {"data": "supplier"},
-            {"data": "purchase_status"},
+            {"data": "currency"},
+            {"data": "estimated_delivery_date"},
+            {"data": "shipping_cost"},
+            {"data": "total_tax_exluded"},
+            {"data": "total_tax"},
+            {"data": "customs_fee"},
+            {"data": "total_cost"},
             {"data": "grand_total"},
-            {"data": "paid_amount"},
-            {"data": "due"},
-            {"data": "payment_status"},
             {"data": "options"},
         ],
         'language': {
@@ -493,7 +505,7 @@
         'columnDefs': [
             {
                 "orderable": false,
-                'targets': [0, 3, 4, 7, 8,9]
+                'targets': [0, 1, 12]
             },
             {
                 'render': function(data, type, row, meta){
@@ -605,14 +617,24 @@
         if (dt_selector.rows( '.selected' ).any() && is_calling_first) {
             var rows = dt_selector.rows( '.selected' ).indexes();
 
-            $( dt_selector.column( 5 ).footer() ).html(dt_selector.cells( rows, 5, { page: 'current' } ).data().sum().toFixed(2));
+
             $( dt_selector.column( 6 ).footer() ).html(dt_selector.cells( rows, 6, { page: 'current' } ).data().sum().toFixed(2));
             $( dt_selector.column( 7 ).footer() ).html(dt_selector.cells( rows, 7, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 8 ).footer() ).html(dt_selector.cells( rows, 8, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 9 ).footer() ).html(dt_selector.cells( rows, 9, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 10 ).footer() ).html(dt_selector.cells( rows, 10, { page: 'current' } ).data().sum().toFixed(2));
+            $( dt_selector.column( 11 ).footer() ).html(dt_selector.cells( rows, 11, { page: 'current' } ).data().sum().toFixed(2));
+
         }
         else {
-            $( dt_selector.column( 5 ).footer() ).html(dt_selector.column( 5, {page:'current'} ).data().sum().toFixed(2));
+
             $( dt_selector.column( 6 ).footer() ).html(dt_selector.column( 6, {page:'current'} ).data().sum().toFixed(2));
             $( dt_selector.column( 7 ).footer() ).html(dt_selector.column( 7, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 8 ).footer() ).html(dt_selector.column( 8, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 9 ).footer() ).html(dt_selector.column( 9, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 10 ).footer() ).html(dt_selector.column( 10, {page:'current'} ).data().sum().toFixed(2));
+            $( dt_selector.column( 11 ).footer() ).html(dt_selector.column( 11, {page:'current'} ).data().sum().toFixed(2));
+
         }
     }
 

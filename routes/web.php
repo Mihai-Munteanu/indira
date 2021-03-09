@@ -52,10 +52,10 @@ Route::group(['middleware' => ['auth', 'active']], function() {
 	// Route::resource('brand', 'BrandController');
 
 
-	// Route::post('importsupplier', 'SupplierController@importSupplier')->name('supplier.import');
-	// Route::post('supplier/deletebyselection', 'SupplierController@deleteBySelection');
-	// Route::get('supplier/lims_supplier_search', 'SupplierController@limsSupplierSearch')->name('supplier.search');
-	// Route::resource('supplier', 'SupplierController');
+	Route::post('importsupplier', 'SupplierController@importSupplier')->name('supplier.import');
+	Route::post('supplier/deletebyselection', 'SupplierController@deleteBySelection');
+	Route::get('supplier/lims_supplier_search', 'SupplierController@limsSupplierSearch')->name('supplier.search');
+	Route::resource('supplier', 'SupplierController');
 
 
 	// Route::post('importwarehouse', 'WarehouseController@importWarehouse')->name('warehouse.import');

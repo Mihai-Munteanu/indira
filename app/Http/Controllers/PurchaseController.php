@@ -55,8 +55,15 @@ class PurchaseController extends Controller
         $columns = array(
             1 => 'created_at',
             2 => 'reference_no',
-            5 => 'grand_total',
-            6 => 'paid_amount',
+            3 => 'supplier',
+            4 => 'currency',
+            5 => 'estimated_delivery_date',
+            6 => 'shipping_cost',
+            7 => 'total_tax_exluded',
+            8 => 'total_tax',
+            9 => 'customs_fee',
+            10 => 'total_cost',
+            11 => 'grand_total',
         );
 
         if(Auth::user()->role_id > 2 && config('staff_access') == 'own')
@@ -159,31 +166,40 @@ class PurchaseController extends Controller
                     $supplier = new Supplier();
                 }
                 $nestedData['supplier'] = $supplier->name;
-                if($purchase->status == 1){
-                    $nestedData['purchase_status'] = '<div class="badge badge-success">'.trans('file.Recieved').'</div>';
-                    $purchase_status = trans('file.Recieved');
-                }
-                elseif($purchase->status == 2){
-                    $nestedData['purchase_status'] = '<div class="badge badge-success">'.trans('file.Partial').'</div>';
-                    $purchase_status = trans('file.Partial');
-                }
-                elseif($purchase->status == 3){
-                    $nestedData['purchase_status'] = '<div class="badge badge-danger">'.trans('file.Pending').'</div>';
-                    $purchase_status = trans('file.Pending');
-                }
-                else{
-                    $nestedData['purchase_status'] = '<div class="badge badge-danger">'.trans('file.Ordered').'</div>';
-                    $purchase_status = trans('file.Ordered');
-                }
 
-                if($purchase->payment_status == 1)
-                    $nestedData['payment_status'] = '<div class="badge badge-danger">'.trans('file.Due').'</div>';
-                else
-                    $nestedData['payment_status'] = '<div class="badge badge-success">'.trans('file.Paid').'</div>';
-
+                $nestedData['currency'] = $purchase->currency;
+                $nestedData['estimated_delivery_date'] = $purchase->estimated_delivery_date;
+                $nestedData['shipping_cost'] = $purchase->shipping_cost;
+                $nestedData['total_tax_exluded'] = $purchase->total_tax_exluded;
+                $nestedData['total_tax'] = $purchase->total_tax;
+                $nestedData['customs_fee'] = $purchase->customs_fee;
+                $nestedData['total_cost'] = $purchase->total_cost;
                 $nestedData['grand_total'] = number_format($purchase->grand_total, 2);
-                $nestedData['paid_amount'] = number_format($purchase->paid_amount, 2);
-                $nestedData['due'] = number_format($purchase->grand_total - $purchase->paid_amount, 2);
+
+                // if($purchase->status == 1){
+                //     $nestedData['purchase_status'] = '<div class="badge badge-success">'.trans('file.Recieved').'</div>';
+                //     $purchase_status = trans('file.Recieved');
+                // }
+                // elseif($purchase->status == 2){
+                //     $nestedData['purchase_status'] = '<div class="badge badge-success">'.trans('file.Partial').'</div>';
+                //     $purchase_status = trans('file.Partial');
+                // }
+                // elseif($purchase->status == 3){
+                //     $nestedData['purchase_status'] = '<div class="badge badge-danger">'.trans('file.Pending').'</div>';
+                //     $purchase_status = trans('file.Pending');
+                // }
+                // else{
+                //     $nestedData['purchase_status'] = '<div class="badge badge-danger">'.trans('file.Ordered').'</div>';
+                //     $purchase_status = trans('file.Ordered');
+                // }
+
+                // if($purchase->payment_status == 1)
+                //     $nestedData['payment_status'] = '<div class="badge badge-danger">'.trans('file.Due').'</div>';
+                // else
+                //     $nestedData['payment_status'] = '<div class="badge badge-success">'.trans('file.Paid').'</div>';
+
+                // $nestedData['paid_amount'] = number_format($purchase->paid_amount, 2);
+                // $nestedData['due'] = number_format($purchase->grand_total - $purchase->paid_amount, 2);
                 $nestedData['options'] = '<div class="btn-group">
                             <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.trans("file.action").'
                               <span class="caret"></span>
@@ -215,8 +231,9 @@ class PurchaseController extends Controller
                 // data for purchase details by one click
                 $user = User::find($purchase->user_id);
 
-                $nestedData['purchase'] = array( '[ "'.date(config('date_format'), strtotime($purchase->created_at->toDateString())).'"', ' "'.$purchase->reference_no.'"', ' "'.$purchase_status.'"',  ' "'.$purchase->id.'"', ' "'.$purchase->warehouse->name.'"', ' "'.$purchase->warehouse->phone.'"', ' "'.$purchase->warehouse->address.'"', ' "'.$supplier->name.'"', ' "'.$supplier->company_name.'"', ' "'.$supplier->email.'"', ' "'.$supplier->phone_number.'"', ' "'.$supplier->address.'"', ' "'.$supplier->city.'"', ' "'.$purchase->total_tax.'"', ' "'.$purchase->total_discount.'"', ' "'.$purchase->total_cost.'"', ' "'.$purchase->order_tax.'"', ' "'.$purchase->order_tax_rate.'"', ' "'.$purchase->order_discount.'"', ' "'.$purchase->shipping_cost.'"', ' "'.$purchase->grand_total.'"', ' "'.$purchase->paid_amount.'"', ' "'.preg_replace('/\s+/S', " ", $purchase->note).'"', ' "'.$user->name.'"', ' "'.$user->email.'"]'
-                );
+                // $nestedData['purchase'] = array( '[ "'.date(config('date_format'), strtotime($purchase->created_at->toDateString())).'"', ' "'.$purchase->reference_no.'"', ' "'.$purchase_status.'"',  ' "'.$purchase->id.'"', ' "'.$purchase->warehouse->name.'"', ' "'.$purchase->warehouse->phone.'"', ' "'.$purchase->warehouse->address.'"', ' "'.$supplier->name.'"', ' "'.$supplier->company_name.'"', ' "'.$supplier->email.'"', ' "'.$supplier->phone_number.'"', ' "'.$supplier->address.'"', ' "'.$supplier->city.'"', ' "'.$purchase->total_tax.'"', ' "'.$purchase->total_discount.'"', ' "'.$purchase->total_cost.'"', ' "'.$purchase->order_tax.'"', ' "'.$purchase->order_tax_rate.'"', ' "'.$purchase->order_discount.'"', ' "'.$purchase->shipping_cost.'"', ' "'.$purchase->grand_total.'"', ' "'.$purchase->paid_amount.'"', ' "'.preg_replace('/\s+/S', " ", $purchase->note).'"', ' "'.$user->name.'"', ' "'.$user->email.'"]'
+                // );
+
                 $data[] = $nestedData;
             }
         }
@@ -318,7 +335,7 @@ class PurchaseController extends Controller
     public function store(Request $request)
     {
         $data = $request->except('document');
-        //return dd($data);
+        // return dd($data);
         $data['user_id'] = Auth::id();
         $data['reference_no'] = 'pr-' . date("Ymd") . '-'. date("his");
         $document = $request->document;

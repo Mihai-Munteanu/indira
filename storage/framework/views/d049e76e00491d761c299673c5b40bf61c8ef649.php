@@ -27,15 +27,18 @@
             <thead>
                 <tr>
                     <th class="not-exported"></th>
-                    <th><?php echo e(trans('file.Image')); ?></th>
-                    <th><?php echo e(trans('file.name')); ?></th>
-                    <th><?php echo e(trans('file.Code')); ?></th>
-                    <th><?php echo e(trans('file.Brand')); ?></th>
-                    <th><?php echo e(trans('file.category')); ?></th>
-                    <th><?php echo e(trans('file.Quantity')); ?></th>
-                    <th><?php echo e(trans('file.Unit')); ?></th>
-                    <th><?php echo e(trans('file.Price')); ?></th>
-                    <th class="not-exported"><?php echo e(trans('file.action')); ?></th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>sku code</th>
+                    <th>Supplier</th>
+                    <th>Supplier sku code</th>
+                    <th>url</th>
+                    <th>Category</th>
+                    <th>Stocks</th>
+                    <th>Cost</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                    <th class="not-exported">Action</th>
                 </tr>
             </thead>
 
@@ -323,12 +326,16 @@
                 {"data": "image"},
                 {"data": "name"},
                 {"data": "code"},
-                {"data": "brand"},
+                {"data": "supplier"},
+                {"data": "supplier_sku"},
+                {"data": "url"},
                 {"data": "category"},
                 {"data": "qty"},
+                {"data": "cost"},
                 {"data": "unit"},
                 {"data": "price"},
                 {"data": "options"},
+
             ],
             'language': {
                 /*'searchPlaceholder': "<?php echo e(trans('file.Type Product Name or Code...')); ?>",*/
@@ -344,7 +351,7 @@
             'columnDefs': [
                 {
                     "orderable": false,
-                    'targets': [0, 1, 9]
+                    'targets': [0, 1, 12]
                 },
                 {
                     'render': function(data, type, row, meta){
@@ -469,6 +476,7 @@
 
 </script>
 <?php $__env->stopSection(); ?>
+
 
 
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/product/index.blade.php ENDPATH**/ ?>

@@ -27,15 +27,18 @@
             <thead>
                 <tr>
                     <th class="not-exported"></th>
-                    <th>{{trans('file.Image')}}</th>
-                    <th>{{trans('file.name')}}</th>
-                    <th>{{trans('file.Code')}}</th>
-                    <th>{{trans('file.Brand')}}</th>
-                    <th>{{trans('file.category')}}</th>
-                    <th>{{trans('file.Quantity')}}</th>
-                    <th>{{trans('file.Unit')}}</th>
-                    <th>{{trans('file.Price')}}</th>
-                    <th class="not-exported">{{trans('file.action')}}</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>sku code</th>
+                    <th>Supplier</th>
+                    <th>Supplier sku code</th>
+                    <th>url</th>
+                    <th>Category</th>
+                    <th>Stocks</th>
+                    <th>Cost</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                    <th class="not-exported">Action</th>
                 </tr>
             </thead>
 
@@ -319,12 +322,16 @@
                 {"data": "image"},
                 {"data": "name"},
                 {"data": "code"},
-                {"data": "brand"},
+                {"data": "supplier"},
+                {"data": "supplier_sku"},
+                {"data": "url"},
                 {"data": "category"},
                 {"data": "qty"},
+                {"data": "cost"},
                 {"data": "unit"},
                 {"data": "price"},
                 {"data": "options"},
+
             ],
             'language': {
                 /*'searchPlaceholder': "{{trans('file.Type Product Name or Code...')}}",*/
@@ -340,7 +347,7 @@
             'columnDefs': [
                 {
                     "orderable": false,
-                    'targets': [0, 1, 9]
+                    'targets': [0, 1, 12]
                 },
                 {
                     'render': function(data, type, row, meta){
@@ -465,4 +472,5 @@
 
 </script>
 @endsection
+
 

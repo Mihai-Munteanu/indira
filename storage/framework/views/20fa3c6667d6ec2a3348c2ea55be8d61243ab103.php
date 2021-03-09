@@ -423,7 +423,7 @@
                                         <?php endif; ?>
 
                                         <?php if($supplier_index_permission_active): ?>
-                                            
+                                            <li id="supplier-list-menu"><a href="<?php echo e(route('supplier.index')); ?>"><?php echo e(trans('file.Supplier List')); ?></a></li>
                                             <?php
                                                 $supplier_add_permission = DB::table('permissions')->where('name', 'suppliers-add')->first();
                                                 $supplier_add_permission_active = DB::table('role_has_permissions')->where([

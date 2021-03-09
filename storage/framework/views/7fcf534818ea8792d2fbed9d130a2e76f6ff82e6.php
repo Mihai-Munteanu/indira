@@ -1,6 +1,6 @@
  <?php $__env->startSection('content'); ?>
 <?php if(session()->has('not_permitted')): ?>
-  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div> 
+  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div>
 <?php endif; ?>
 <section class="forms">
     <div class="container-fluid">
@@ -32,7 +32,7 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <div class="col-md-6">   
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label><?php echo e(trans('file.Company Name')); ?> *</label>
                                     <input type="text" name="company_name" required class="form-control">
@@ -117,4 +117,6 @@
     $("ul#people #supplier-create-menu").addClass("active");
 </script>
 <?php $__env->stopSection(); ?>
+
+
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/supplier/create.blade.php ENDPATH**/ ?>

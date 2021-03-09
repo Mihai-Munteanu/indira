@@ -1,9 +1,9 @@
  <?php $__env->startSection('content'); ?>
 <?php if(session()->has('not_permitted')): ?>
-  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div> 
+  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div>
 <?php endif; ?>
 <?php if(session()->has('message')): ?>
-  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo session()->get('message'); ?></div> 
+  <div class="alert alert-success alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo session()->get('message'); ?></div>
 <?php endif; ?>
 <section>
     <div class="container-fluid">
@@ -118,28 +118,24 @@
 </div>
 
 <script type="text/javascript">
-
     $("ul#people").siblings('a').attr('aria-expanded','true');
     $("ul#people").addClass("show");
     $("ul#people #supplier-list-menu").addClass("active");
-
     var all_permission = <?php echo json_encode($all_permission) ?>;
     var supplier_id = [];
     var user_verified = <?php echo json_encode(env('USER_VERIFIED')) ?>;
-    
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-
 	function confirmDelete() {
 	    if (confirm("Are you sure want to delete?")) {
 	        return true;
 	    }
 	    return false;
 	}
-
     $('#supplier-table').DataTable( {
         "order": [],
         'language': {
@@ -206,7 +202,7 @@
                         body: function ( data, row, column, node ) {
                             if (column === 0 && (data.indexOf('<img src=') !== -1)) {
                                 var regex = /<img.*?src=['"](.*?)['"]/;
-                                data = regex.exec(data)[1];                 
+                                data = regex.exec(data)[1];
                             }
                             return data;
                         }
@@ -260,10 +256,10 @@
             },
         ],
     } );
-
     if(all_permission.indexOf("suppliers-delete") == -1)
         $('.buttons-delete').addClass('d-none');
-
 </script>
 <?php $__env->stopSection(); ?>
+
+
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/supplier/index.blade.php ENDPATH**/ ?>

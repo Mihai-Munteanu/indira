@@ -1,6 +1,6 @@
  <?php $__env->startSection('content'); ?>
 <?php if(session()->has('not_permitted')): ?>
-  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div> 
+  <div class="alert alert-danger alert-dismissible text-center"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><?php echo e(session()->get('not_permitted')); ?></div>
 <?php endif; ?>
 <section class="forms">
     <div class="container-fluid">
@@ -38,7 +38,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">  
+                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label><?php echo e(trans('file.Purchase Status')); ?></label>
@@ -333,7 +333,7 @@ var lims_product_code = [
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <?php
         echo  '"'.implode('","', $productArray).'"';
-        ?> 
+        ?>
 ];
 
     var lims_productcodeSearch = $('#lims_productcodeSearch');
@@ -531,7 +531,7 @@ function productSearch(data) {
                 unit_operation_value.splice(rowindex,0, data[8]);
                 calculateRowProductData(1);
             }
-            
+
         }
     });
 }
@@ -576,7 +576,7 @@ function calculateRowProductData(quantity) {
         var net_unit_cost = (100 / (100 + tax_rate[rowindex])) * sub_total_unit;
         var tax = (sub_total_unit - net_unit_cost) * quantity;
         var sub_total = sub_total_unit * quantity;
-    
+
         $('table.order-list tbody tr:nth-child(' + (rowindex + 1) + ')').find('td:nth-child(5)').text(net_unit_cost.toFixed(2));
         $('table.order-list tbody tr:nth-child(' + (rowindex + 1) + ')').find('.net_unit_cost').val(net_unit_cost.toFixed(2));
         $('table.order-list tbody tr:nth-child(' + (rowindex + 1) + ')').find('td:nth-child(7)').text(tax.toFixed(2));
@@ -732,4 +732,6 @@ $('#purchase-form').on('submit',function(e){
 <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
 
 <?php $__env->stopSection(); ?>
+
+
 <?php echo $__env->make('layout.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/purchase/create.blade.php ENDPATH**/ ?>
