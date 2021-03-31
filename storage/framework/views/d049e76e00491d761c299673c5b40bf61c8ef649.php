@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <?php if(in_array("products-add", $all_permission)): ?>
             <a href="<?php echo e(route('products.create')); ?>" class="btn btn-info"><i class="dripicons-plus"></i> <?php echo e(__('file.add_product')); ?></a>
-            <a href="#" data-toggle="modal" data-target="#importProduct" class="btn btn-primary"><i class="dripicons-copy"></i> <?php echo e(__('file.import_product')); ?></a>
+            
         <?php endif; ?>
     </div>
     <div class="table-responsive">
@@ -46,42 +46,8 @@
     </div>
 </section>
 
-<div id="importProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-    <div role="document" class="modal-dialog">
-      <div class="modal-content">
-        <?php echo Form::open(['route' => 'product.import', 'method' => 'post', 'files' => true]); ?>
 
-        <div class="modal-header">
-          <h5 id="exampleModalLabel" class="modal-title">Import Product</h5>
-          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true"><i class="dripicons-cross"></i></span></button>
-        </div>
-        <div class="modal-body">
-          <p class="italic"><small><?php echo e(trans('file.The field labels marked with * are required input fields')); ?>.</small></p>
-           <p><?php echo e(trans('file.The correct column order is')); ?> (image, name*, code*, type*, brand, category*, unit_code*, cost*, price*, product_details, variant_name, item_code, additional_price) <?php echo e(trans('file.and you must follow this')); ?>.</p>
-           <p><?php echo e(trans('file.To display Image it must be stored in')); ?> public/images/product <?php echo e(trans('file.directory')); ?>. <?php echo e(trans('file.Image name must be same as product name')); ?></p>
-           <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label><?php echo e(trans('file.Upload CSV File')); ?> *</label>
-                        <?php echo e(Form::file('file', array('class' => 'form-control','required'))); ?>
 
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label> <?php echo e(trans('file.Sample File')); ?></label>
-                        <a href="public/sample_file/sample_products.csv" class="btn btn-info btn-block btn-md"><i class="dripicons-download"></i>  <?php echo e(trans('file.Download')); ?></a>
-                    </div>
-                </div>
-           </div>
-            <?php echo e(Form::submit('Submit', ['class' => 'btn btn-primary'])); ?>
-
-        </div>
-        <?php echo Form::close(); ?>
-
-      </div>
-    </div>
-</div>
 
 <div id="product-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
     <div role="document" class="modal-dialog">
@@ -184,10 +150,23 @@
     });
 
     function productDetails(product, imagedata) {
-        product[11] = product[11].replace(/@/g, '"');
+       //console.log('productDetails', product);
+
+       // product[11] = product[11].replace(/@/g, '"');
         htmltext = slidertext = '';
 
-        htmltext = '<p><strong><?php echo e(trans("file.Type")); ?>: </strong>'+product[0]+'</p><p><strong><?php echo e(trans("file.name")); ?>: </strong>'+product[1]+'</p><p><strong><?php echo e(trans("file.Code")); ?>: </strong>'+product[2]+ '</p><p><strong><?php echo e(trans("file.Brand")); ?>: </strong>'+product[3]+'</p><p><strong><?php echo e(trans("file.category")); ?>: </strong>'+product[4]+'</p><p><strong><?php echo e(trans("file.Quantity")); ?>: </strong>'+product[16]+'</p><p><strong><?php echo e(trans("file.Unit")); ?>: </strong>'+product[5]+'</p><p><strong><?php echo e(trans("file.Cost")); ?>: </strong>'+product[6]+'</p><p><strong><?php echo e(trans("file.Price")); ?>: </strong>'+product[7]+'</p><p><strong><?php echo e(trans("file.Tax")); ?>: </strong>'+product[8]+'</p><p><strong><?php echo e(trans("file.Tax Method")); ?> : </strong>'+product[9]+'</p><p><strong><?php echo e(trans("file.Alert Quantity")); ?> : </strong>'+product[10]+'</p><p><strong><?php echo e(trans("file.Product Details")); ?>: </strong></p>'+product[11];
+        htmltext = `
+            <p><strong>Name: </strong>${product.name}</p>
+            <p><strong>Sku Code: </strong>${product.sku_code}</p>
+            <p><strong>Supplier: </strong>${product.supplier}</p>
+            <p><strong>Supplier sku code:${product.supplier_sku}</p>
+            <p><strong>URL: </strong>${product.url}</p>
+            <p><strong>Category: </strong>${product.category}</p>
+            <p><strong>Stoks: </strong>${product.qty}</p>
+            <p><strong>Cost: </strong>${product.cost}</p>
+            <p><strong>Unit: </strong>${product.unit}</p>
+            <p><strong>Price: </strong>${product.price}</p>
+            `
 
         if(product[17]) {
             var product_image = product[17].split(",");
@@ -309,7 +288,7 @@
             "processing": true,
             "serverSide": true,
             "ajax":{
-                url:"products/product-data",
+                url:"/products/product-data",
                 data:{
                     all_permission: all_permission
                 },
@@ -317,8 +296,9 @@
                 type:"post"
             },
             "createdRow": function( row, data, dataIndex ) {
+                //console.log("data['product']->", data['product'], data)
                 $(row).addClass('product-link');
-                $(row).attr('data-product', data['product']);
+                $(row).attr('data-product', JSON.stringify(data));
                 $(row).attr('data-imagedata', data['imagedata']);
             },
             "columns": [

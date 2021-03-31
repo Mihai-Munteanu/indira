@@ -10,21 +10,21 @@
                         <h4>{{trans('file.add_product')}}</h4>
                     </div>
                     <div class="card-body">
-                        <p class="italic"><small>{{trans('file.The field labels marked with * are required input fields')}}.</small></p>
+
                         <form id="product-form">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>{{trans('file.Product Type')}} *</strong> </label>
-                                        <div class="input-group">
-                                            <select name="type" required class="form-control selectpicker" id="type">
-                                                <option value="standard">Standard</option>
-                                                <option value="combo">Combo</option>
-                                                <option value="digital">Digital</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+<div class="col-md-4">
+    <div class="form-group">
+        <label>{{trans('file.Product Type')}} *</strong> </label>
+        <div class="input-group">
+            <select name="type" required class="form-control selectpicker" id="type">
+                <option value="standard">Standard</option>
+                {{-- <option value="combo">Combo</option>
+                <option value="digital">Digital</option> --}}
+            </select>
+        </div>
+    </div>
+</div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Product Name')}} *</strong> </label>
@@ -34,17 +34,43 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>{{trans('file.Product Code')}} *</strong> </label>
+                                        <label>Product sku code *</strong> </label>
                                         <div class="input-group">
                                             <input type="text" name="code" class="form-control" id="code" aria-describedby="code" required>
-                                            <div class="input-group-append">
+                                            {{-- <div class="input-group-append">
                                                 <button id="genbutton" type="button" class="btn btn-sm btn-default" title="{{trans('file.Generate')}}"><i class="fa fa-refresh"></i></button>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <span class="validation-msg" id="code-error"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Supplier *</strong> </label>
+                                        <input type="text" name="supplier" class="form-control" id="supplier" aria-describedby="supplier" required>
+                                        <span class="validation-msg" id="supplier-error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Supplier's sku code *</strong> </label>
+                                        <div class="input-group">
+                                            <input type="text" name="supplier_sku_code" class="form-control" id="supplier_sku_code" aria-describedby="supplier_sku_code" required>
+                                            {{-- <div class="input-group-append">
+                                                <button id="genbutton" type="button" class="btn btn-sm btn-default" title="{{trans('file.Generate')}}"><i class="fa fa-refresh"></i></button>
+                                            </div> --}}
+                                        </div>
+                                        <span class="validation-msg" id="supplier_sku_code-error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Url </strong> </label>
+                                        <input type="text" name="url" class="form-control" id="url" aria-describedby="url">
+                                        <span class="validation-msg" id="url-error"></span>
+                                    </div>
+                                </div>
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Barcode Symbology')}} *</strong> </label>
                                         <div class="input-group">
@@ -58,18 +84,16 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                <div id="digital" class="col-md-4">
+                                </div> --}}
+                                {{-- <div id="digital" class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Attach File')}} *</strong> </label>
-                                        <div class="input-group">
-                                            <input type="file" name="file" class="form-control">
-                                        </div>
+                                      §
                                         <span class="validation-msg"></span>
                                     </div>
-                                </div>
-                                <div id="combo" class="col-md-9 mb-1">
-                                    <label>{{trans('file.add_product')}}</label>
+                                </div> --}}
+                                {{-- <div id="combo" class="col-md-9 mb-1">
+                                    <label>asdasdasdas{{trans('file.add_product')}}</label>
                                     <div class="search-box input-group mb-3">
                                         <button class="btn btn-secondary"><i class="fa fa-barcode"></i></button>
                                         <input type="text" name="product_code_name" id="lims_productcodeSearch" placeholder="Please type product code and select..." class="form-control" />
@@ -89,8 +113,8 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
+                                </div> --}}
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Brand')}}</strong> </label>
                                         <div class="input-group">
@@ -101,7 +125,7 @@
                                           </select>
                                       </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.category')}} *</strong> </label>
@@ -115,7 +139,7 @@
                                       <span class="validation-msg"></span>
                                     </div>
                                 </div>
-                                <div id="unit" class="col-md-12">
+                                {{-- <div id="unit" class="col-md-12">
                                     <div class="row ">
                                         <div class="col-md-4 form-group">
                                                 <label>{{trans('file.Product Unit')}} *</strong> </label>
@@ -148,7 +172,7 @@
                                                 </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div id="cost" class="col-md-4">
                                      <div class="form-group">
                                         <label>{{trans('file.Product Cost')}} *</strong> </label>
@@ -156,7 +180,7 @@
                                         <span class="validation-msg"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Product Price')}} *</strong> </label>
                                         <input type="number" name="price" required class="form-control" step="any">
@@ -165,14 +189,14 @@
                                     <div class="form-group">
                                         <input type="hidden" name="qty" value="0.00">
                                     </div>
-                                </div>
-                                <div id="alert-qty" class="col-md-4">
-                                    <div class="form-group">
-                                        <label>{{trans('file.Alert Quantity')}}</strong> </label>
-                                        <input type="number" name="alert_quantity" class="form-control" step="any">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
+                                </div> --}}
+{{-- <div id="alert-qty" class="col-md-4">
+    <div class="form-group">
+        <label>{{trans('file.Alert Quantity')}}</strong> </label>
+        <input type="number" name="alert_quantity" class="form-control" step="any">
+    </div>
+</div> --}}
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Product Tax')}}</strong> </label>
                                         <select name="tax_id" class="form-control selectpicker">
@@ -182,8 +206,8 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
+                                </div> --}}
+                                {{-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Tax Method')}}</strong> </label> <i class="dripicons-question" data-toggle="tooltip" title="{{trans('file.Exclusive: Poduct price = Actual product price + Tax. Inclusive: Actual product price = Product price - Tax')}}"></i>
                                         <select name="tax_method" class="form-control selectpicker">
@@ -198,7 +222,7 @@
                                         <label>{{trans('file.Featured')}}</label>
                                         <p class="italic">{{trans('file.Featured product will be displayed in POS')}}</p>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>{{trans('file.Product Image')}}</strong> </label> <i class="dripicons-question" data-toggle="tooltip" title="{{trans('file.You can upload multiple image. Only .jpeg, .jpg, .png, .gif file can be uploaded. First image will be base image.')}}"></i>
@@ -212,7 +236,7 @@
                                         <textarea name="product_details" class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 mt-2" id="diffPrice-option">
+                                {{-- <div class="col-md-12 mt-2" id="diffPrice-option">
                                     <h5><input name="is_diffPrice" type="checkbox" id="is-diffPrice" value="1">&nbsp; {{trans('file.This product has different price for different warehouse')}}</h5>
                                 </div>
                                 <div class="col-md-6" id="diffPrice-section">
@@ -294,7 +318,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="form-group">
                                 <input type="button" value="{{trans('file.submit')}}" id="submit-btn" class="btn btn-primary">
@@ -313,13 +337,13 @@
     $("ul#product").addClass("show");
     $("ul#product #product-create-menu").addClass("active");
 
-    $("#digital").hide();
-    $("#combo").hide();
-    $("#variant-section").hide();
-    $("#diffPrice-section").hide();
-    $("#promotion_price").hide();
-    $("#start_date").hide();
-    $("#last_date").hide();
+//    $("#digital").hide();
+//    $("#combo").hide();
+//    $("#variant-section").hide();
+//    $("#diffPrice-section").hide();
+//    $("#promotion_price").hide();
+//    $("#start_date").hide();
+//    $("#last_date").hide();
 
     $('[data-toggle="tooltip"]').tooltip();
 
@@ -329,11 +353,11 @@
         }
     });
 
-    $('#genbutton').on("click", function(){
-      $.get('gencode', function(data){
-        $("input[name='code']").val(data);
-      });
-    });
+//    $('#genbutton').on("click", function(){
+//      $.get('gencode', function(data){
+//        $("input[name='code']").val(data);
+//      });
+//    });
 
 
 
@@ -350,53 +374,45 @@
     });
 
     $('select[name="type"]').on('change', function() {
-        if($(this).val() == 'combo'){
-            $("input[name='cost']").prop('required',false);
-            $("select[name='unit_id']").prop('required',false);
-            hide();
-            $("#combo").show(300);
-            $("input[name='price']").prop('disabled',true);
-            $("#is-variant").prop("checked", false);
-            $("#is-diffPrice").prop("checked", false);
-            $("#variant-section, #variant-option, #diffPrice-option, #diffPrice-section").hide(300);
-        }
-        else if($(this).val() == 'digital'){
-            $("input[name='cost']").prop('required',false);
-            $("select[name='unit_id']").prop('required',false);
-            $("input[name='file']").prop('required',true);
-            hide();
-            $("#digital").show(300);
-            $("#combo").hide(300);
-            $("input[name='price']").prop('disabled',false);
-            $("#is-variant").prop("checked", false);
-            $("#is-diffPrice").prop("checked", false);
-            $("#variant-section, #variant-option, #diffPrice-option, #diffPrice-section").hide(300);
-        }
-        else if($(this).val() == 'standard'){
+//        if($(this).val() == 'combo'){
+//            $("input[name='cost']").prop('required',false);
+//            $("select[name='unit_id']").prop('required',false);
+//            hide();
+//            $("#combo").show(300);
+//            $("input[name='price']").prop('disabled',true);
+//            $("#is-variant").prop("checked", false);
+//            $("#is-diffPrice").prop("checked", false);
+//            $("#variant-section, #variant-option, #diffPrice-option, #diffPrice-section").hide(300);
+//        }
+//        else if($(this).val() == 'digital'){
+//            $("input[name='cost']").prop('required',false);
+//            $("select[name='unit_id']").prop('required',false);
+//            $("input[name='file']").prop('required',true);
+//            hide();
+//            $("#digital").show(300);
+//            $("#combo").hide(300);
+//            $("input[name='price']").prop('disabled',false);
+//            $("#is-variant").prop("checked", false);
+//            $("#is-diffPrice").prop("checked", false);
+//            $("#variant-section, #variant-option, #diffPrice-option, #diffPrice-section").hide(300);
+//        }
+//        else
+        if($(this).val() == 'standard'){
             $("input[name='cost']").prop('required',true);
-            $("select[name='unit_id']").prop('required',true);
+            //$("select[name='unit_id']").prop('required',true);
             $("input[name='file']").prop('required',false);
             $("#cost").show(300);
-            $("#unit").show(300);
+            //$("#unit").show(300);
             $("#alert-qty").show(300);
             $("#variant-option").show(300);
             $("#diffPrice-option").show(300);
-            $("#digital").hide(300);
-            $("#combo").hide(300);
-            $("input[name='price']").prop('disabled',false);
+            //$("#digital").hide(300);
+            //$("#combo").hide(300);
+            //$("input[name='price']").prop('disabled',false);
         }
     });
 
-    $('select[name="unit_id"]').on('change', function() {
 
-        unitID = $(this).val();
-        if(unitID) {
-            populate_category(unitID);
-        }else{
-            $('select[name="sale_unit_id"]').empty();
-            $('select[name="purchase_unit_id"]').empty();
-        }
-    });
     <?php $productArray = []; ?>
     var lims_product_code = [ @foreach($lims_product_list as $product)
         <?php

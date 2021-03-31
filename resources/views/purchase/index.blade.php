@@ -82,12 +82,16 @@
                 <thead>
                     <th>#</th>
                     <th>{{trans('file.product')}}</th>
+                    <th>Sku Code</th>
+                    <th>Supplier</th>
+                    <th>Supplier Sku code</th>
+                    <th>URL</th>
+                    <th>Category</th>
                     <th>Qty</th>
-                    <th>{{trans('file.Unit Cost')}}</th>
-                    <th>{{trans('file.Tax')}}</th>
-                    <th>{{trans('file.Discount')}}</th>
-                    <th>{{trans('file.Subtotal')}}</th>
+                    <th>Cost</th>
+                    <th>Price</th>
                 </thead>
+
                 <tbody>
                 </tbody>
             </table>
@@ -96,7 +100,7 @@
     </div>
 </div>
 
-<div id="view-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+{{-- <div id="view-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -121,9 +125,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
-<div id="add-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+{{-- <div id="add-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -190,9 +194,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
-<div id="edit-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+{{-- <div id="edit-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
     <div role="document" class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -254,7 +258,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <script type="text/javascript">
 
@@ -462,7 +466,7 @@
         "processing": true,
         "serverSide": true,
         "ajax":{
-            url:"purchases/purchase-data",
+            url:"/purchases/purchase-data",
             data:{
                 all_permission: all_permission
             },
@@ -474,7 +478,8 @@
         },
         "createdRow": function( row, data, dataIndex ) {
             $(row).addClass('purchase-link');
-            $(row).attr('data-purchase', data['purchase']);
+//            console.log(data)
+            $(row).attr('data-purchase', JSON.stringify(data));
         },
         "columns": [
             {"data": "key"},
@@ -639,92 +644,98 @@
     }
 
     function purchaseDetails(purchase){
-        var htmltext = '<strong>{{trans("file.Date")}}: </strong>'+purchase[0]+'<br><strong>{{trans("file.reference")}}: </strong>'+purchase[1]+'<br><strong>{{trans("file.Purchase Status")}}: </strong>'+purchase[2]+'<br><br><div class="row"><div class="col-md-6"><strong>{{trans("file.From")}}:</strong><br>'+purchase[4]+'<br>'+purchase[5]+'<br>'+purchase[6]+'</div><div class="col-md-6"><div class="float-right"><strong>{{trans("file.To")}}:</strong><br>'+purchase[7]+'<br>'+purchase[8]+'<br>'+purchase[9]+'<br>'+purchase[10]+'<br>'+purchase[11]+'<br>'+purchase[12]+'</div></div></div>';
+//console.log(purchase)
+        var htmltext = `
+            <strong>{{trans("file.Date")}}: </strong>${purchase.date}<br>
+            <strong>{{trans("file.reference")}}: </strong>${purchase.reference_no}<br>
+            <strong>Supplier: </strong>${purchase.supplier}<br>
+            <br>
+                {{-- <div class="row">
+                    <div class="col-md-6">
+                        <strong>{{trans("file.From")}}:</strong><br>'+purchase[4]+'<br>'+purchase[5]+'<br>'+purchase[6]+'
+                    </div>
 
-        $.get('purchases/product_purchase/' + purchase[3], function(data){
+                    <div class="col-md-6">
+                        <div class="float-right">
+                            <strong>{{trans("file.To")}}:</strong><br>'+purchase[7]+'<br>'+purchase[8]+'<br>'+purchase[9]+'<br>'+purchase[10]+'<br>'+purchase[11]+'<br>'+purchase[12]+'
+                        </div>
+                    </div>
+                </div> --}}
+                `;
+
+
+
+        $.get('purchases/product_purchase/' + purchase.id, function(data){
             $(".product-purchase-list tbody").remove();
-            var name_code = data[0];
-            var qty = data[1];
-            var unit_code = data[2];
-            var tax = data[3];
-            var tax_rate = data[4];
-            var discount = data[5];
-            var subtotal = data[6];
+
             var newBody = $("<tbody>");
-            $.each(name_code, function(index){
+            $.each(data, function(index, purchaseProduct){
+                const product = purchaseProduct.product
+                //const category = purchaseProduct.category
                 var newRow = $("<tr>");
                 var cols = '';
+
                 cols += '<td><strong>' + (index+1) + '</strong></td>';
-                cols += '<td>' + name_code[index] + '</td>';
-                cols += '<td>' + qty[index] + ' ' + unit_code[index] + '</td>';
-                cols += '<td>' + (subtotal[index] / qty[index]) + '</td>';
-                cols += '<td>' + tax[index] + '(' + tax_rate[index] + '%)' + '</td>';
-                cols += '<td>' + discount[index] + '</td>';
-                cols += '<td>' + subtotal[index] + '</td>';
+                cols += `<td><strong> ${product.name}</strong></td>`;
+                cols += `<td><strong> ${product.code}</strong></td>`;
+                cols += `<td><strong> ${product.supplier_id}</strong></td>`;
+                cols += `<td><strong> ${product.supplier_sku_code}</strong></td>`;
+                cols += `<td><strong> ${product.url}</strong></td>`;
+                cols += `<td><strong> ${product.category_id}</strong></td>`;
+                cols += `<td><strong> ${product.qty}</strong></td>`;
+                cols += `<td><strong> ${product.cost}</strong></td>`;
+                cols += `<td><strong> ${product.price}</strong></td>`;
                 newRow.append(cols);
                 newBody.append(newRow);
             });
 
             var newRow = $("<tr>");
             cols = '';
-            cols += '<td colspan=4><strong>{{trans("file.Total")}}:</strong></td>';
-            cols += '<td>' + purchase[13] + '</td>';
-            cols += '<td>' + purchase[14] + '</td>';
-            cols += '<td>' + purchase[15] + '</td>';
+            cols += '<td colspan=7><strong>{{trans("file.Total")}}:</strong></td>';
+            //cols += `<td>${ purchase.total_qty }</td>`;
+            cols += `<td>${ purchase.total_cost }</td>`;
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong>{{trans("file.Order Tax")}}:</strong></td>';
-            cols += '<td>' + purchase[16] + '(' + purchase[17] + '%)' + '</td>';
+            cols += `<td>${purchase.order_tax} ${purchase.order_tax_rate}% }</td>`;
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong>{{trans("file.Order Discount")}}:</strong></td>';
-            cols += '<td>' + purchase[18] + '</td>';
+            cols += '<td>' + purchase.order_discount + '</td>';
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong>{{trans("file.Shipping Cost")}}:</strong></td>';
-            cols += '<td>' + purchase[19] + '</td>';
+            cols += '<td>' + purchase.shipping_cost + '</td>';
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong>{{trans("file.grand total")}}:</strong></td>';
-            cols += '<td>' + purchase[20] + '</td>';
-            newRow.append(cols);
-            newBody.append(newRow);
-
-            var newRow = $("<tr>");
-            cols = '';
-            cols += '<td colspan=6><strong>{{trans("file.Paid Amount")}}:</strong></td>';
-            cols += '<td>' + purchase[21] + '</td>';
-            newRow.append(cols);
-            newBody.append(newRow);
-
-            var newRow = $("<tr>");
-            cols = '';
-            cols += '<td colspan=6><strong>{{trans("file.Due")}}:</strong></td>';
-            cols += '<td>' + (purchase[20] - purchase[21]) + '</td>';
+            cols += '<td>' + purchase.grand_total + '</td>';
             newRow.append(cols);
             newBody.append(newRow);
 
              $("table.product-purchase-list").append(newBody);
         });
-
-        var htmlfooter = '<p><strong>{{trans("file.Note")}}:</strong> '+purchase[22]+'</p><strong>{{trans("file.Created By")}}:</strong><br>'+purchase[23]+'<br>'+purchase[24];
+//console.log(purchase.user_id);
+        var htmlfooter = '<p><strong>{{trans("file.Note")}}:</strong> '+purchase.note+'</p><strong>{{trans("file.Created By")}}:</strong><br>'+ purchase.user_id;
 
         $('#purchase-content').html(htmltext);
         $('#purchase-footer').html(htmlfooter);
         $('#purchase-details').modal('show');
     }
+
+
 
     $(document).on('submit', '.payment-form', function(e) {
         if( $('input[name="paying_amount"]').val() < parseFloat($('#amount').val()) ) {

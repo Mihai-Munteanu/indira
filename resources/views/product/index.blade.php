@@ -19,7 +19,7 @@
     <div class="container-fluid">
         @if(in_array("products-add", $all_permission))
             <a href="{{route('products.create')}}" class="btn btn-info"><i class="dripicons-plus"></i> {{__('file.add_product')}}</a>
-            <a href="#" data-toggle="modal" data-target="#importProduct" class="btn btn-primary"><i class="dripicons-copy"></i> {{__('file.import_product')}}</a>
+            {{-- <a href="#" data-toggle="modal" data-target="#importProduct" class="btn btn-primary"><i class="dripicons-copy"></i> {{__('file.import_product')}}</a> --}}
         @endif
     </div>
     <div class="table-responsive">
@@ -46,7 +46,8 @@
     </div>
 </section>
 
-<div id="importProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+{{-- Import product --}}
+{{-- <div id="importProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
     <div role="document" class="modal-dialog">
       <div class="modal-content">
         {!! Form::open(['route' => 'product.import', 'method' => 'post', 'files' => true]) !!}
@@ -77,7 +78,7 @@
         {!! Form::close() !!}
       </div>
     </div>
-</div>
+</div> --}}
 
 <div id="product-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
     <div role="document" class="modal-dialog">
@@ -180,10 +181,23 @@
     });
 
     function productDetails(product, imagedata) {
-        product[11] = product[11].replace(/@/g, '"');
+       //console.log('productDetails', product);
+
+       // product[11] = product[11].replace(/@/g, '"');
         htmltext = slidertext = '';
 
-        htmltext = '<p><strong>{{trans("file.Type")}}: </strong>'+product[0]+'</p><p><strong>{{trans("file.name")}}: </strong>'+product[1]+'</p><p><strong>{{trans("file.Code")}}: </strong>'+product[2]+ '</p><p><strong>{{trans("file.Brand")}}: </strong>'+product[3]+'</p><p><strong>{{trans("file.category")}}: </strong>'+product[4]+'</p><p><strong>{{trans("file.Quantity")}}: </strong>'+product[16]+'</p><p><strong>{{trans("file.Unit")}}: </strong>'+product[5]+'</p><p><strong>{{trans("file.Cost")}}: </strong>'+product[6]+'</p><p><strong>{{trans("file.Price")}}: </strong>'+product[7]+'</p><p><strong>{{trans("file.Tax")}}: </strong>'+product[8]+'</p><p><strong>{{trans("file.Tax Method")}} : </strong>'+product[9]+'</p><p><strong>{{trans("file.Alert Quantity")}} : </strong>'+product[10]+'</p><p><strong>{{trans("file.Product Details")}}: </strong></p>'+product[11];
+        htmltext = `
+            <p><strong>Name: </strong>${product.name}</p>
+            <p><strong>Sku Code: </strong>${product.sku_code}</p>
+            <p><strong>Supplier: </strong>${product.supplier}</p>
+            <p><strong>Supplier sku code:${product.supplier_sku}</p>
+            <p><strong>URL: </strong>${product.url}</p>
+            <p><strong>Category: </strong>${product.category}</p>
+            <p><strong>Stoks: </strong>${product.qty}</p>
+            <p><strong>Cost: </strong>${product.cost}</p>
+            <p><strong>Unit: </strong>${product.unit}</p>
+            <p><strong>Price: </strong>${product.price}</p>
+            `
 
         if(product[17]) {
             var product_image = product[17].split(",");
@@ -305,7 +319,7 @@
             "processing": true,
             "serverSide": true,
             "ajax":{
-                url:"products/product-data",
+                url:"/products/product-data",
                 data:{
                     all_permission: all_permission
                 },
@@ -313,8 +327,9 @@
                 type:"post"
             },
             "createdRow": function( row, data, dataIndex ) {
+                //console.log("data['product']->", data['product'], data)
                 $(row).addClass('product-link');
-                $(row).attr('data-product', data['product']);
+                $(row).attr('data-product', JSON.stringify(data));
                 $(row).attr('data-imagedata', data['imagedata']);
             },
             "columns": [

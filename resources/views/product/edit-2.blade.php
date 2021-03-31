@@ -12,6 +12,7 @@
                     <div class="card-body">
                         <p class="italic"><small>{{trans('file.The field labels marked with * are required input fields')}}.</small></p>
                         <form id="product-form">
+                                           {{-- de sters input --}}
                             <input type="hidden" name="id" value="{{$lims_product_data->id}}" />
                             <div class="row">
                                 <div class="col-md-4">
@@ -127,14 +128,13 @@
 
                                <div class="col-md-4">
                                     <div class="form-group">
-
-                                         <label>Supplier</strong> </label>
+                                        <label>Supplier</strong> </label>
                                         <div class="input-group">
                                             <input type="hidden" name="supplier" value="{{ $lims_product_data->supplier_id}}">
                                           <select name="supplier_id" class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Supplier...">
-                                            @foreach($lims_supplier_list as $supplier)
+                                            {{-- @foreach($lims_supplier_list as $supplier)
                                                 <option value="{{$supplier->id}}">{{$supplier->name}}</option>
-                                            @endforeach
+                                            @endforeach --}}
                                           </select>
                                       </div>
                                     </div>
@@ -745,7 +745,21 @@
         }
     });
 
+    {{-- var starting_date = $('#starting_date');
+    starting_date.datepicker({
+     format: "dd-mm-yyyy",
+     startDate: "<?php echo date('d-m-Y'); ?>",
+     autoclose: true,
+     todayHighlight: true
+     }); --}}
 
+    {{-- var ending_date = $('#ending_date');
+    ending_date.datepicker({
+     format: "dd-mm-yyyy",
+     startDate: "<?php echo date('d-m-Y'); ?>",
+     autoclose: true,
+     todayHighlight: true
+     }); --}}
 
     //dropzone portion
     Dropzone.autoDiscover = false;

@@ -82,7 +82,7 @@ Route::group(['middleware' => ['auth', 'active']], function() {
 
 	Route::get('products/lims_product_search', 'ProductController@limsProductSearch')->name('product.search');
 	Route::post('products/deletebyselection', 'ProductController@deleteBySelection');
-	Route::post('products/update', 'ProductController@updateProduct');
+	Route::post('products/update', 'ProductController@updpateProduct');
 	Route::resource('products', 'ProductController');
 
 	// Route::post('importcustomer_group', 'CustomerGroupController@importCustomerGroup')->name('customer_group.import');

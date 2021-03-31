@@ -79,16 +79,23 @@ class PurchaseController extends Controller
             $limit = $totalData;
         $start = $request->input('start');
         $order = $columns[$request->input('order.0.column')];
+
+        if ($order === 'supplier') {
+            $order = 'suppliers.name';
+        }
+
         $dir = $request->input('order.0.dir');
         if(empty($request->input('search.value'))){
             if(Auth::user()->role_id > 2 && config('staff_access') == 'own')
                 $purchases = Purchase::with('supplier', 'warehouse')->offset($start)
+                            ->leftJoin('suppliers', 'purchases.supplier_id', '=', 'suppliers.id')
                             ->where('user_id', Auth::id())
                             ->limit($limit)
                             ->orderBy($order, $dir)
                             ->get();
             else
                 $purchases = Purchase::with('supplier', 'warehouse')->offset($start)
+                // ->leftJoin('suppliers', 'purchases.supplier_id', '=', 'suppliers.id')
                             ->limit($limit)
                             ->orderBy($order, $dir)
                             ->get();
@@ -435,23 +442,24 @@ class PurchaseController extends Controller
 
     public function productPurchaseData($id)
     {
-        $lims_product_purchase_data = ProductPurchase::where('purchase_id', $id)->get();
-        foreach ($lims_product_purchase_data as $key => $product_purchase_data) {
-            $product = Product::find($product_purchase_data->product_id);
-            $unit = Unit::find($product_purchase_data->purchase_unit_id);
-            if($product_purchase_data->variant_id) {
-                $lims_product_variant_data = ProductVariant::FindExactProduct($product->id, $product_purchase_data->variant_id)->select('item_code')->first();
-                $product->code = $lims_product_variant_data->item_code;
-            }
-            $product_purchase[0][$key] = $product->name . ' [' . $product->code.']';
-            $product_purchase[1][$key] = $product_purchase_data->qty;
-            $product_purchase[2][$key] = $unit->unit_code;
-            $product_purchase[3][$key] = $product_purchase_data->tax;
-            $product_purchase[4][$key] = $product_purchase_data->tax_rate;
-            $product_purchase[5][$key] = $product_purchase_data->discount;
-            $product_purchase[6][$key] = $product_purchase_data->total;
-        }
-        return $product_purchase;
+        return $lims_product_purchase_data = ProductPurchase::with('purchase', 'product')->where('purchase_id', $id)->get();
+
+        // foreach ($lims_product_purchase_data as $key => $product_purchase_data) {
+        //     $product = Product::find($product_purchase_data->product_id);
+        //     $unit = Unit::find($product_purchase_data->purchase_unit_id);
+        //     if($product_purchase_data->variant_id) {
+        //         $lims_product_variant_data = ProductVariant::FindExactProduct($product->id, $product_purchase_data->variant_id)->select('item_code')->first();
+        //         $product->code = $lims_product_variant_data->item_code;
+        //     }
+        //     $product_purchase[0][$key] = $product->name . ' [' . $product->code.']';
+        //     $product_purchase[1][$key] = $product_purchase_data->qty;
+        //     $product_purchase[2][$key] = $unit->unit_code;
+        //     $product_purchase[3][$key] = $product_purchase_data->tax;
+        //     $product_purchase[4][$key] = $product_purchase_data->tax_rate;
+        //     $product_purchase[5][$key] = $product_purchase_data->discount;
+        //     $product_purchase[6][$key] = $product_purchase_data->total;
+        // }
+        // return $product_purchase;
     }
 
     // public function purchaseByCsv()

@@ -80,12 +80,16 @@
                 <thead>
                     <th>#</th>
                     <th><?php echo e(trans('file.product')); ?></th>
+                    <th>Sku Code</th>
+                    <th>Supplier</th>
+                    <th>Supplier Sku code</th>
+                    <th>URL</th>
+                    <th>Category</th>
                     <th>Qty</th>
-                    <th><?php echo e(trans('file.Unit Cost')); ?></th>
-                    <th><?php echo e(trans('file.Tax')); ?></th>
-                    <th><?php echo e(trans('file.Discount')); ?></th>
-                    <th><?php echo e(trans('file.Subtotal')); ?></th>
+                    <th>Cost</th>
+                    <th>Price</th>
                 </thead>
+
                 <tbody>
                 </tbody>
             </table>
@@ -94,169 +98,11 @@
     </div>
 </div>
 
-<div id="view-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-    <div role="document" class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 id="exampleModalLabel" class="modal-title"><?php echo e(trans('file.All Payment')); ?></h5>
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true"><i class="dripicons-cross"></i></span></button>
-            </div>
-            <div class="modal-body">
-                <table class="table table-hover payment-list">
-                    <thead>
-                        <tr>
-                            <th><?php echo e(trans('file.date')); ?></th>
-                            <th><?php echo e(trans('file.Reference No')); ?></th>
-                            <th><?php echo e(trans('file.Account')); ?></th>
-                            <th><?php echo e(trans('file.Amount')); ?></th>
-                            <th><?php echo e(trans('file.Paid By')); ?></th>
-                            <th><?php echo e(trans('file.action')); ?></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div id="add-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-    <div role="document" class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 id="exampleModalLabel" class="modal-title"><?php echo e(trans('file.Add Payment')); ?></h5>
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true"><i class="dripicons-cross"></i></span></button>
-            </div>
-            <div class="modal-body">
-                <?php echo Form::open(['route' => 'purchase.add-payment', 'method' => 'post', 'class' => 'payment-form' ]); ?>
 
-                    <div class="row">
-                        <input type="hidden" name="balance">
-                        <div class="col-md-6">
-                            <label><?php echo e(trans('file.Recieved Amount')); ?> *</label>
-                            <input type="text" name="paying_amount" class="form-control numkey"  step="any" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label><?php echo e(trans('file.Paying Amount')); ?> *</label>
-                            <input type="text" id="amount" name="amount" class="form-control"  step="any" required>
-                        </div>
-                        <div class="col-md-6 mt-1">
-                            <label><?php echo e(trans('file.Change')); ?> : </label>
-                            <p class="change ml-2">0.00</p>
-                        </div>
-                        <div class="col-md-6 mt-1">
-                            <label><?php echo e(trans('file.Paid By')); ?></label>
-                            <select name="paid_by_id" class="form-control">
-                                <option value="1">Cash</option>
-                                <option value="3">Credit Card</option>
-                                <option value="4">Cheque</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group mt-2">
-                        <div class="card-element" class="form-control">
-                        </div>
-                        <div class="card-errors" role="alert"></div>
-                    </div>
-                    <div id="cheque">
-                        <div class="form-group">
-                            <label><?php echo e(trans('file.Cheque Number')); ?> *</label>
-                            <input type="text" name="cheque_no" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label> <?php echo e(trans('file.Account')); ?></label>
-                        <select class="form-control selectpicker" name="account_id">
-                        <?php $__currentLoopData = $lims_account_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $account): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <?php if($account->is_default): ?>
-                            <option selected value="<?php echo e($account->id); ?>"><?php echo e($account->name); ?> [<?php echo e($account->account_no); ?>]</option>
-                            <?php else: ?>
-                            <option value="<?php echo e($account->id); ?>"><?php echo e($account->name); ?> [<?php echo e($account->account_no); ?>]</option>
-                            <?php endif; ?>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label><?php echo e(trans('file.Payment Note')); ?></label>
-                        <textarea rows="3" class="form-control" name="payment_note"></textarea>
-                    </div>
 
-                    <input type="hidden" name="purchase_id">
 
-                    <button type="submit" class="btn btn-primary"><?php echo e(trans('file.submit')); ?></button>
-                <?php echo e(Form::close()); ?>
 
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="edit-payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-    <div role="document" class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 id="exampleModalLabel" class="modal-title"><?php echo e(trans('file.Update Payment')); ?></h5>
-                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true"><i class="dripicons-cross"></i></span></button>
-            </div>
-            <div class="modal-body">
-                <?php echo Form::open(['route' => 'purchase.update-payment', 'method' => 'post', 'class' => 'payment-form' ]); ?>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label><?php echo e(trans('file.Recieved Amount')); ?> *</label>
-                            <input type="text" name="edit_paying_amount" class="form-control numkey"  step="any" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label><?php echo e(trans('file.Paying Amount')); ?> *</label>
-                            <input type="text" name="edit_amount" class="form-control"  step="any" required>
-                        </div>
-                        <div class="col-md-6 mt-1">
-                            <label><?php echo e(trans('file.Change')); ?> : </label>
-                            <p class="change ml-2">0.00</p>
-                        </div>
-                        <div class="col-md-6 mt-1">
-                            <label><?php echo e(trans('file.Paid By')); ?></label>
-                            <select name="edit_paid_by_id" class="form-control selectpicker">
-                                <option value="1">Cash</option>
-                                <option value="3">Credit Card</option>
-                                <option value="4">Cheque</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group mt-2">
-                        <div class="card-element" class="form-control">
-                        </div>
-                        <div class="card-errors" role="alert"></div>
-                    </div>
-                    <div id="edit-cheque">
-                        <div class="form-group">
-                            <label><?php echo e(trans('file.Cheque Number')); ?> *</label>
-                            <input type="text" name="edit_cheque_no" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label> <?php echo e(trans('file.Account')); ?></label>
-                        <select class="form-control selectpicker" name="account_id">
-                        <?php $__currentLoopData = $lims_account_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $account): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <option value="<?php echo e($account->id); ?>"><?php echo e($account->name); ?> [<?php echo e($account->account_no); ?>]</option>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label><?php echo e(trans('file.Payment Note')); ?></label>
-                        <textarea rows="3" class="form-control" name="edit_payment_note"></textarea>
-                    </div>
-
-                    <input type="hidden" name="payment_id">
-
-                    <button type="submit" class="btn btn-primary"><?php echo e(trans('file.update')); ?></button>
-                <?php echo e(Form::close()); ?>
-
-            </div>
-        </div>
-    </div>
-</div>
 
 <script type="text/javascript">
 
@@ -464,7 +310,7 @@
         "processing": true,
         "serverSide": true,
         "ajax":{
-            url:"purchases/purchase-data",
+            url:"/purchases/purchase-data",
             data:{
                 all_permission: all_permission
             },
@@ -476,7 +322,8 @@
         },
         "createdRow": function( row, data, dataIndex ) {
             $(row).addClass('purchase-link');
-            $(row).attr('data-purchase', data['purchase']);
+//            console.log(data)
+            $(row).attr('data-purchase', JSON.stringify(data));
         },
         "columns": [
             {"data": "key"},
@@ -641,92 +488,88 @@
     }
 
     function purchaseDetails(purchase){
-        var htmltext = '<strong><?php echo e(trans("file.Date")); ?>: </strong>'+purchase[0]+'<br><strong><?php echo e(trans("file.reference")); ?>: </strong>'+purchase[1]+'<br><strong><?php echo e(trans("file.Purchase Status")); ?>: </strong>'+purchase[2]+'<br><br><div class="row"><div class="col-md-6"><strong><?php echo e(trans("file.From")); ?>:</strong><br>'+purchase[4]+'<br>'+purchase[5]+'<br>'+purchase[6]+'</div><div class="col-md-6"><div class="float-right"><strong><?php echo e(trans("file.To")); ?>:</strong><br>'+purchase[7]+'<br>'+purchase[8]+'<br>'+purchase[9]+'<br>'+purchase[10]+'<br>'+purchase[11]+'<br>'+purchase[12]+'</div></div></div>';
+//console.log(purchase)
+        var htmltext = `
+            <strong><?php echo e(trans("file.Date")); ?>: </strong>${purchase.date}<br>
+            <strong><?php echo e(trans("file.reference")); ?>: </strong>${purchase.reference_no}<br>
+            <strong>Supplier: </strong>${purchase.supplier}<br>
+            <br>
+                
+                `;
 
-        $.get('purchases/product_purchase/' + purchase[3], function(data){
+
+
+        $.get('purchases/product_purchase/' + purchase.id, function(data){
             $(".product-purchase-list tbody").remove();
-            var name_code = data[0];
-            var qty = data[1];
-            var unit_code = data[2];
-            var tax = data[3];
-            var tax_rate = data[4];
-            var discount = data[5];
-            var subtotal = data[6];
+
             var newBody = $("<tbody>");
-            $.each(name_code, function(index){
+            $.each(data, function(index, purchaseProduct){
+                const product = purchaseProduct.product
+                //const category = purchaseProduct.category
                 var newRow = $("<tr>");
                 var cols = '';
+
                 cols += '<td><strong>' + (index+1) + '</strong></td>';
-                cols += '<td>' + name_code[index] + '</td>';
-                cols += '<td>' + qty[index] + ' ' + unit_code[index] + '</td>';
-                cols += '<td>' + (subtotal[index] / qty[index]) + '</td>';
-                cols += '<td>' + tax[index] + '(' + tax_rate[index] + '%)' + '</td>';
-                cols += '<td>' + discount[index] + '</td>';
-                cols += '<td>' + subtotal[index] + '</td>';
+                cols += `<td><strong> ${product.name}</strong></td>`;
+                cols += `<td><strong> ${product.code}</strong></td>`;
+                cols += `<td><strong> ${product.supplier_id}</strong></td>`;
+                cols += `<td><strong> ${product.supplier_sku_code}</strong></td>`;
+                cols += `<td><strong> ${product.url}</strong></td>`;
+                cols += `<td><strong> ${product.category_id}</strong></td>`;
+                cols += `<td><strong> ${product.qty}</strong></td>`;
+                cols += `<td><strong> ${product.cost}</strong></td>`;
+                cols += `<td><strong> ${product.price}</strong></td>`;
                 newRow.append(cols);
                 newBody.append(newRow);
             });
 
             var newRow = $("<tr>");
             cols = '';
-            cols += '<td colspan=4><strong><?php echo e(trans("file.Total")); ?>:</strong></td>';
-            cols += '<td>' + purchase[13] + '</td>';
-            cols += '<td>' + purchase[14] + '</td>';
-            cols += '<td>' + purchase[15] + '</td>';
+            cols += '<td colspan=7><strong><?php echo e(trans("file.Total")); ?>:</strong></td>';
+            //cols += `<td>${ purchase.total_qty }</td>`;
+            cols += `<td>${ purchase.total_cost }</td>`;
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong><?php echo e(trans("file.Order Tax")); ?>:</strong></td>';
-            cols += '<td>' + purchase[16] + '(' + purchase[17] + '%)' + '</td>';
+            cols += `<td>${purchase.order_tax} ${purchase.order_tax_rate}% }</td>`;
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong><?php echo e(trans("file.Order Discount")); ?>:</strong></td>';
-            cols += '<td>' + purchase[18] + '</td>';
+            cols += '<td>' + purchase.order_discount + '</td>';
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong><?php echo e(trans("file.Shipping Cost")); ?>:</strong></td>';
-            cols += '<td>' + purchase[19] + '</td>';
+            cols += '<td>' + purchase.shipping_cost + '</td>';
             newRow.append(cols);
             newBody.append(newRow);
 
             var newRow = $("<tr>");
             cols = '';
             cols += '<td colspan=6><strong><?php echo e(trans("file.grand total")); ?>:</strong></td>';
-            cols += '<td>' + purchase[20] + '</td>';
-            newRow.append(cols);
-            newBody.append(newRow);
-
-            var newRow = $("<tr>");
-            cols = '';
-            cols += '<td colspan=6><strong><?php echo e(trans("file.Paid Amount")); ?>:</strong></td>';
-            cols += '<td>' + purchase[21] + '</td>';
-            newRow.append(cols);
-            newBody.append(newRow);
-
-            var newRow = $("<tr>");
-            cols = '';
-            cols += '<td colspan=6><strong><?php echo e(trans("file.Due")); ?>:</strong></td>';
-            cols += '<td>' + (purchase[20] - purchase[21]) + '</td>';
+            cols += '<td>' + purchase.grand_total + '</td>';
             newRow.append(cols);
             newBody.append(newRow);
 
              $("table.product-purchase-list").append(newBody);
         });
-
-        var htmlfooter = '<p><strong><?php echo e(trans("file.Note")); ?>:</strong> '+purchase[22]+'</p><strong><?php echo e(trans("file.Created By")); ?>:</strong><br>'+purchase[23]+'<br>'+purchase[24];
+console.log(purchase.user_id);
+        var htmlfooter = '<p><strong><?php echo e(trans("file.Note")); ?>:</strong> '+purchase.note+'</p><strong><?php echo e(trans("file.Created By")); ?>:</strong><br>'+ purchase.user_id;
 
         $('#purchase-content').html(htmltext);
         $('#purchase-footer').html(htmlfooter);
         $('#purchase-details').modal('show');
     }
+
+
 
     $(document).on('submit', '.payment-form', function(e) {
         if( $('input[name="paying_amount"]').val() < parseFloat($('#amount').val()) ) {

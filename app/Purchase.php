@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\ProductPurchase;
 use Illuminate\Database\Eloquent\Model;
 
 class Purchase extends Model
