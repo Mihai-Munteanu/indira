@@ -22,9 +22,9 @@ class CreatePermissionTables extends Migration
             $table->timestamps();
         });
 
-        Schema::table('roles', function (Blueprint $table) {
-            $table->string('guard_name')->nullable();
-        });
+        // Schema::table('roles', function (Blueprint $table) {
+        //     $table->string('guard_name')->nullable();
+        // });
 
         Schema::create($tableNames['model_has_permissions'], function (Blueprint $table) use ($tableNames) {
             $table->unsignedInteger('permission_id');

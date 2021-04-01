@@ -18,6 +18,7 @@ class CreateRolesTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->boolean('is_active');
+            $table->string('guard_name')->nullable();
             $table->timestamps();
         });
     }
