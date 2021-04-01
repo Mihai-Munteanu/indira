@@ -17,17 +17,8 @@ class CreateGeneralSettingsTable extends Migration
             $table->increments('id');
             $table->string('site_title');
             $table->string('site_logo')->nullable();
-            $table->string('currency')->nullable();
-            $table->string('currency_position')->nullable();
-            $table->string('staff_access')->nullable();
-            $table->string('date_format')->nullable();
-            $table->string('theme')->nullable();
-            $table->string('developed_by')->nullable();
-            $table->string('invoice_format')->nullable();
-            $table->integer('state')->nullable();
             $table->timestamps();
-            }
-        );
+        });
     }
 
     /**

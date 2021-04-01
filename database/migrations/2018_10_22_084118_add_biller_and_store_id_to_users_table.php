@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRolesTable extends Migration
+class AddBillerAndStoreIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->boolean('is_active');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('biller_id')->after('role_id')->nullable();
+            $table->integer('warehouse_id')->after('biller_id')->nullable();
         });
     }
 
@@ -29,6 +26,8 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }
