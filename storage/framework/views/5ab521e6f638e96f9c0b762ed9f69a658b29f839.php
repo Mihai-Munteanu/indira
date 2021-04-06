@@ -199,18 +199,6 @@
         }
     });
 
-//de sters
-$('select[name="unit_id"]').on('change', function() {
-
-    unitID = $(this).val();
-    if(unitID) {
-        populate_category(unitID);
-    }else{
-        $('select[name="sale_unit_id"]').empty();
-        $('select[name="purchase_unit_id"]').empty();
-    }
-});
-
 
     <?php $productArray = []; ?>
     var lims_product_code = [ <?php $__currentLoopData = $lims_product_list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
