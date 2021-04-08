@@ -14,12 +14,13 @@ class RoleSeeder extends Seeder
     {
         $allValueSource = \DB::connection('mysql_source')
             ->table('roles')
-            ->selectRaw('name, description, is_active, guard_name')
+            ->selectRaw('id, name, description, is_active, guard_name')
             ->get()
             ->each(
                 function ($old) {
                     Roles::create(
                         [
+                            'id' => $old->id,
                             'name' => $old->name,
                             'description' => $old->description,
                             'is_active' => $old->is_active,

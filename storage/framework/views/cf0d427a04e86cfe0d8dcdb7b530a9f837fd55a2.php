@@ -561,7 +561,7 @@
 
              $("table.product-purchase-list").append(newBody);
         });
-console.log(purchase.user_id);
+//console.log(purchase.user_id);
         var htmlfooter = '<p><strong><?php echo e(trans("file.Note")); ?>:</strong> '+purchase.note+'</p><strong><?php echo e(trans("file.Created By")); ?>:</strong><br>'+ purchase.user_id;
 
         $('#purchase-content').html(htmltext);

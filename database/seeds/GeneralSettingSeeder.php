@@ -14,7 +14,7 @@ class GeneralSettingSeeder extends Seeder
     {
         $allValueSource = \DB::connection('mysql_source')
             ->table('general_settings')
-            ->selectRaw('site_title, site_logo' )
+            ->selectRaw('site_title, site_logo, currency, staff_access, date_format, developed_by, invoice_format, state, theme, currency_position', )
             ->get()
             ->each(
                 function ($old) {
@@ -22,6 +22,14 @@ class GeneralSettingSeeder extends Seeder
                         [
                         'site_title' => $old->site_title,
                         'site_logo' => $old->site_logo,
+                        'currency' => $old->currency,
+                        'staff_access' => $old->staff_access,
+                        'date_format' => $old->date_format,
+                        'developed_by' => $old->developed_by,
+                        'invoice_format' => $old->invoice_format,
+                        'state' => $old->state,
+                        'theme' => $old->theme,
+                        'currency_position' => $old->currency_position,
                         ]
                     );
                 }
