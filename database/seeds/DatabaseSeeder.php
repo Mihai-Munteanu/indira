@@ -21,6 +21,12 @@ class DatabaseSeeder extends Seeder
                 RoleHasPermissionsSeeder::class,
                 PosSettingSeeder::class,
                 SupplierSeeder::class,
+                CategorySeeder::class,
+                UnitSeeder::class,
+                BrandSeeder::class,
+                TaxSeeder::class,
+                ProductSeeder::class,
+
 
             ]
         );

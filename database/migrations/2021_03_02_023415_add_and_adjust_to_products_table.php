@@ -13,12 +13,9 @@ class AddAndAdjustToProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('products', function (Blueprint $table) {
-            $table->integer('supplier_id')->nullable();
-            $table->string('supplier_sku_code')->nullable();
-            $table->string('url')->nullable();
-            $table->string('sale_price')->nullable();
-        });
+    //     Schema::table('products', function (Blueprint $table) {
+
+    //     });
     }
 
     /**
@@ -28,8 +25,8 @@ class AddAndAdjustToProductsTable extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('products', function (Blueprint $table) {
+        //     //
+        // });
     }
 }

@@ -17,7 +17,9 @@ class CreateProductsTable extends Migration
             $table->integer('brand_id')->nullable();
             $table->integer('category_id');
             $table->integer('unit_id');
+//nu am gasit ce face purchase_unit_id
             $table->integer('purchase_unit_id');
+//nu am gasit ce face purchase_unit_id
             $table->integer('sale_unit_id');
             $table->string('cost');
             $table->string('price');
@@ -34,6 +36,10 @@ class CreateProductsTable extends Migration
             $table->text('product_details')->nullable();
             $table->boolean('is_active')->nullable();
             $table->timestamps();
+            $table->integer('supplier_id')->nullable();
+            $table->string('supplier_sku_code')->nullable();
+            $table->string('url')->nullable();
+            $table->string('sale_price')->nullable();
         });
     }
 
