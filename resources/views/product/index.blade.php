@@ -34,8 +34,8 @@
                     <th>Supplier sku code</th>
                     <th>url</th>
                     <th>Category</th>
-                    <th>Stocks</th>
                     <th>Cost</th>
+                    <th>Stocks</th>
                     <th>Unit</th>
                     <th>Price</th>
                     <th class="not-exported">Action</th>
