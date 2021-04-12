@@ -1,1 +1,0 @@
-<?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/adjustment/create.blade.php ENDPATH**/ ?>

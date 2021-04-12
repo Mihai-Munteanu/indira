@@ -1,1 +1,0 @@
-<?php /**PATH /Users/mihai/work/practice/indira/salepropos/resources/views/money_transfer/index.blade.php ENDPATH**/ ?>

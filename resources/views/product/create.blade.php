@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="forms">
-    <div class="container-fluid">
+    <div class="container-fluid overflow">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -10,25 +10,24 @@
                         <h4>{{trans('file.add_product')}}</h4>
                     </div>
                     <div class="card-body">
-
                         <form id="product-form">
                             <div class="row">
-<div class="col-md-4">
-    <div class="form-group">
-        <label>{{trans('file.Product Type')}} *</strong> </label>
-        <div class="input-group">
-            <select name="type" required class="form-control selectpicker" id="type">
-                <option value="standard">Standard</option>
-                {{-- <option value="combo">Combo</option>
-                <option value="digital">Digital</option> --}}
-            </select>
-        </div>
-    </div>
-</div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>{{trans('file.Product Type')}} *</strong> </label>
+                                        <div class="input-group">
+                                            <select name="type"  class="form-control selectpicker" id="type">
+                                                <option value="standard">Standard</option>
+                                                <option value="combo">Combo</option>
+                                                <option value="digital">Digital</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>{{trans('file.Product Name')}} *</strong> </label>
-                                        <input type="text" name="name" class="form-control" id="name" aria-describedby="name" required>
+                                        <input type="text" name="name" class="form-control" id="name" aria-describedby="name" >
                                         <span class="validation-msg" id="name-error"></span>
                                     </div>
                                 </div>
@@ -36,7 +35,7 @@
                                     <div class="form-group">
                                         <label>Product sku code *</strong> </label>
                                         <div class="input-group">
-                                            <input type="text" name="code" class="form-control" id="code" aria-describedby="code" required>
+                                            <input type="text" name="code" class="form-control" id="code" aria-describedby="code" >
                                             {{-- <div class="input-group-append">
                                                 <button id="genbutton" type="button" class="btn btn-sm btn-default" title="{{trans('file.Generate')}}"><i class="fa fa-refresh"></i></button>
                                             </div> --}}
@@ -47,7 +46,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Supplier *</strong> </label>
-                                        <input type="text" name="supplier" class="form-control" id="supplier" aria-describedby="supplier" required>
+                                        <input type="text" name="supplier" class="form-control" id="supplier" aria-describedby="supplier" >
                                         <span class="validation-msg" id="supplier-error"></span>
                                     </div>
                                 </div>
@@ -55,7 +54,7 @@
                                     <div class="form-group">
                                         <label>Supplier's sku code *</strong> </label>
                                         <div class="input-group">
-                                            <input type="text" name="supplier_sku_code" class="form-control" id="supplier_sku_code" aria-describedby="supplier_sku_code" required>
+                                            <input type="text" name="supplier_sku_code" class="form-control" id="supplier_sku_code" aria-describedby="supplier_sku_code" >
                                             {{-- <div class="input-group-append">
                                                 <button id="genbutton" type="button" class="btn btn-sm btn-default" title="{{trans('file.Generate')}}"><i class="fa fa-refresh"></i></button>
                                             </div> --}}
@@ -74,7 +73,7 @@
                                     <div class="form-group">
                                         <label>{{trans('file.Barcode Symbology')}} *</strong> </label>
                                         <div class="input-group">
-                                            <select name="barcode_symbology" required class="form-control selectpicker">
+                                            <select name="barcode_symbology"  class="form-control selectpicker">
                                                 <option value="C128">Code 128</option>
                                                 <option value="C39">Code 39</option>
                                                 <option value="UPCA">UPC-A</option>
@@ -130,7 +129,7 @@
                                     <div class="form-group">
                                         <label>{{trans('file.category')}} *</strong> </label>
                                         <div class="input-group">
-                                          <select name="category_id" required class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Category...">
+                                          <select name="category_id"  class="selectpicker form-control" data-live-search="true" data-live-search-style="begins" title="Select Category...">
                                             @foreach($lims_category_list as $category)
                                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                             @endforeach
@@ -176,7 +175,7 @@
                                 <div id="cost" class="col-md-4">
                                      <div class="form-group">
                                         <label>{{trans('file.Product Cost')}} *</strong> </label>
-                                        <input type="number" name="cost" required class="form-control" step="any">
+                                        <input type="number" name="cost"  class="form-control" step="any">
                                         <span class="validation-msg"></span>
                                     </div>
                                 </div>
@@ -624,36 +623,36 @@
     });
 
     function validate() {
-        var product_code = $("input[name='code']").val();
-        var barcode_symbology = $('select[name="barcode_symbology"]').val();
-        var exp = /^\d+$/;
+        //var product_code = $("input[name='code']").val();
+       // var barcode_symbology = $('select[name="barcode_symbology"]').val();
+        //var exp = /^\d+$/;
 
-        if(!(product_code.match(exp)) && (barcode_symbology == 'UPCA' || barcode_symbology == 'UPCE' || barcode_symbology == 'EAN8' || barcode_symbology == 'EAN13') ) {
-            alert('Product code must be numeric.');
-            return false;
-        }
-        else if(product_code.match(exp)) {
-            if(barcode_symbology == 'UPCA' && product_code.length > 11){
-                alert('Product code length must be less than 12');
-                return false;
-            }
-            else if(barcode_symbology == 'EAN8' && product_code.length > 7){
-                alert('Product code length must be less than 8');
-                return false;
-            }
-            else if(barcode_symbology == 'EAN13' && product_code.length > 12){
-                alert('Product code length must be less than 13');
-                return false;
-            }
-        }
+//        if(!(product_code.match(exp)) && (barcode_symbology == 'UPCA' || barcode_symbology == 'UPCE' || barcode_symbology == 'EAN8' || barcode_symbology == 'EAN13') ) {
+//            alert('Product code must be numeric.');
+//            return false;
+//        }
+//        else if(product_code.match(exp)) {
+//            if(barcode_symbology == 'UPCA' && product_code.length > 11){
+//                alert('Product code length must be less than 12');
+//                return false;
+//            }
+//            else if(barcode_symbology == 'EAN8' && product_code.length > 7){
+//                alert('Product code length must be less than 8');
+//                return false;
+//            }
+//            else if(barcode_symbology == 'EAN13' && product_code.length > 12){
+//                alert('Product code length must be less than 13');
+//                return false;
+//            }
+//        }
 
-        if( $("#type").val() == 'combo' ) {
-            var rownumber = $('table.order-list tbody tr:last').index();
-            if (rownumber < 0) {
-                alert("Please insert product to table!")
-                return false;
-            }
-        }
+//        if( $("#type").val() == 'combo' ) {
+//            var rownumber = $('table.order-list tbody tr:last').index();
+//            if (rownumber < 0) {
+//                alert("Please insert product to table!")
+//                return false;
+//            }
+//        }
         if($("#is-variant").is(":checked")) {
             rowindex = $("table#variant-table tbody tr:last").index();
             if (rowindex < 0) {
@@ -715,8 +714,10 @@
         init: function () {
             var myDropzone = this;
             $('#submit-btn').on("click", function (e) {
+                    console.log('here');
                 e.preventDefault();
                 if ( $("#product-form").valid() && validate() ) {
+                    console.log('validate');
                     tinyMCE.triggerSave();
                     if(myDropzone.getAcceptedFiles().length) {
                         myDropzone.processQueue();
@@ -727,7 +728,7 @@
                             url:'{{route('products.store')}}',
                             data: $("#product-form").serialize(),
                             success:function(response){
-                                //console.log(response);
+                                console.log(response);
                                 location.href = '../products';
                             },
                             error:function(response) {

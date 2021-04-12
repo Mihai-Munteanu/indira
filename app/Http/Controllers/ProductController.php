@@ -153,6 +153,7 @@ class ProductController extends Controller
         }
         $data = array();
 
+
         if (!empty($products)) {
             //*to do; nu inteleg de ce nu pot sa dau dd aici sau in alta parte.
             foreach ($products as $key => $product) {
@@ -164,12 +165,12 @@ class ProductController extends Controller
                 $nestedData['name'] = $product->name;
                 $nestedData['code'] = $product->code;
 
-                $nestedData['supplier'] = $product->supplier_id;
+                $nestedData['supplier'] = optional($product->supplier)->name;
 
                 $nestedData['supplier_sku'] = $product->supplier_sku_code;
                 $nestedData['url'] = $product->url;
                 //*to do; nu inteleg cum a facut legatura intre tabelul de $products si category fara sa foloseasca category_id;
-                $nestedData['category'] = $product->category->name;
+                $nestedData['category'] = optional($product->category)->name;
                 $nestedData['qty'] = $product->qty;
                 $nestedData['cost'] = $product->cost;
 
@@ -253,6 +254,9 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+
+
+        logger('in store');
         $this->validate($request, [
             'code' => [
                 'max:255',
@@ -279,10 +283,12 @@ class ProductController extends Controller
 
         $data['product_details'] = str_replace('"', '@', $data['product_details']);
 
-        if ($data['starting_date'])
-            $data['starting_date'] = date('Y-m-d', strtotime($data['starting_date']));
-        if ($data['last_date'])
-            $data['last_date'] = date('Y-m-d', strtotime($data['last_date']));
+        // dd($data);
+
+        // if ($data['starting_date'])
+        //     $data['starting_date'] = date('Y-m-d', strtotime($data['starting_date']));
+        // if ($data['last_date'])
+        //     $data['last_date'] = date('Y-m-d', strtotime($data['last_date']));
         $data['is_active'] = true;
         $images = $request->image;
         $image_names = [];
@@ -304,6 +310,7 @@ class ProductController extends Controller
             $file->move('public/product/files', $fileName);
             $data['file'] = $fileName;
         }
+
         $lims_product_data = Product::create($data);
         // dealing with product variant
         // if (isset($data['is_variant'])) {
@@ -359,6 +366,7 @@ class ProductController extends Controller
     public function updateProduct(Request $request)
     {
 
+        logger('productController');
 
 
         if (!env('USER_VERIFIED')) {
@@ -510,6 +518,7 @@ class ProductController extends Controller
             //     }
             // }
             $lims_product_data->update($data);
+
             \Session::flash('edit_message', 'Product updated successfully');
         }
     }
@@ -619,7 +628,7 @@ class ProductController extends Controller
         else
             $product[] = $lims_product_data->code;
         $product[] = $lims_product_data->price;
-        $product[] = DNS1D::getBarcodePNG($lims_product_data->code, $lims_product_data->barcode_symbology);
+        // $product[] = DNS1D::getBarcodePNG($lims_product_data->code, $lims_product_data->barcode_symbology);
         $product[] = $lims_product_data->promotion_price;
         $product[] = config('currency');
         $product[] = config('currency_position');

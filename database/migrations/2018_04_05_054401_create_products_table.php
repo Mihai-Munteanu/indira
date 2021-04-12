@@ -11,19 +11,32 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('code');
-            $table->string('type');
-            $table->string('barcode_symbology');
-            $table->integer('brand_id')->nullable();
-            $table->integer('category_id');
-            $table->integer('unit_id');
-//nu am gasit ce face purchase_unit_id
-            $table->integer('purchase_unit_id');
-//nu am gasit ce face purchase_unit_id
-            $table->integer('sale_unit_id');
-            $table->string('cost');
-            $table->string('price');
+            $table->longText('image')->nullable();
+            $table->string('url')->nullable();
+            $table->integer('supplier_id')->nullable();
+            $table->integer('category_id')->nullable();
+            $table->string('cost')->nullable();
+            $table->string('price')->nullable();
+            $table->string('sale_price')->nullable();
+// de redenumit sku
+            $table->string('code')->nullable();
+            $table->timestamp('last_updated')->nullable();
+// de redwnumit in stock
             $table->double('qty')->nullable();
+            $table->timestamps();
+
+
+//de sters tot de mai jos, inclusiv din seeder.
+            $table->string('supplier_sku_code')->nullable();
+            $table->text('description')->nullable();
+            $table->string('type')->nullable();
+            $table->string('barcode_symbology')->nullable();
+            $table->integer('brand_id')->nullable();
+            $table->integer('unit_id')->nullable();
+//nu am gasit ce face purchase_unit_id
+            $table->integer('purchase_unit_id')->nullable();;
+//nu am gasit ce face purchase_unit_id
+            $table->integer('sale_unit_id')->nullable();;
             $table->double('alert_quantity')->nullable();
             $table->tinyInteger('promotion')->nullable();
             $table->string('promotion_price')->nullable();
@@ -31,15 +44,9 @@ class CreateProductsTable extends Migration
             $table->date('last_date')->nullable();
             $table->integer('tax_id')->nullable();
             $table->integer('tax_method')->nullable();
-            $table->longText('image')->nullable();
             $table->tinyInteger('featured')->nullable();
             $table->text('product_details')->nullable();
             $table->boolean('is_active')->nullable();
-            $table->timestamps();
-            $table->integer('supplier_id')->nullable();
-            $table->string('supplier_sku_code')->nullable();
-            $table->string('url')->nullable();
-            $table->string('sale_price')->nullable();
         });
     }
 
