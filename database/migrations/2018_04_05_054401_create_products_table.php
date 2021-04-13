@@ -10,24 +10,24 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->longText('image')->nullable();
-            $table->string('url')->nullable();
+            $table->string('name');
+// de redenumit sku
+            $table->string('code')->nullable();
             $table->integer('supplier_id')->nullable();
+            $table->string('supplier_sku_code')->nullable();
+            $table->string('url')->nullable();
             $table->integer('category_id')->nullable();
             $table->string('cost')->nullable();
             $table->string('price')->nullable();
-            $table->string('sale_price')->nullable();
-// de redenumit sku
-            $table->string('code')->nullable();
-            $table->timestamp('last_updated')->nullable();
-// de redwnumit in stock
+            $table->double('sale_price')->nullable();
+// de redenumit in stock
             $table->double('qty')->nullable();
+            $table->timestamp('last_updated')->nullable();
             $table->timestamps();
 
 
 //de sters tot de mai jos, inclusiv din seeder.
-            $table->string('supplier_sku_code')->nullable();
             $table->text('description')->nullable();
             $table->string('type')->nullable();
             $table->string('barcode_symbology')->nullable();

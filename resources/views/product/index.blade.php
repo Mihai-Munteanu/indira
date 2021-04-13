@@ -35,9 +35,9 @@
                     <th>url</th>
                     <th>Category</th>
                     <th>Cost</th>
-                    <th>Stocks</th>
-                    <th>Unit</th>
                     <th>Price</th>
+                    <th>Sale price</th>
+                    <th>Stocks</th>
                     <th class="not-exported">Action</th>
                 </tr>
             </thead>
@@ -187,16 +187,17 @@
         htmltext = slidertext = '';
 
         htmltext = `
+            <p><strong>Image: </strong>${product.image}</p>
             <p><strong>Name: </strong>${product.name}</p>
-            <p><strong>Sku Code: </strong>${product.sku_code}</p>
+            <p><strong>Sku Code: </strong>${product.code}</p>
             <p><strong>Supplier: </strong>${product.supplier}</p>
             <p><strong>Supplier sku code:${product.supplier_sku}</p>
             <p><strong>URL: </strong>${product.url}</p>
             <p><strong>Category: </strong>${product.category}</p>
-            <p><strong>Stoks: </strong>${product.qty}</p>
             <p><strong>Cost: </strong>${product.cost}</p>
-            <p><strong>Unit: </strong>${product.unit}</p>
             <p><strong>Price: </strong>${product.price}</p>
+            <p><strong>Unit: </strong>${product.sale_price}</p>
+            <p><strong>Stoks: </strong>${product.qty}</p>
             `
 
         if(product[17]) {
@@ -341,10 +342,10 @@
                 {"data": "supplier_sku"},
                 {"data": "url"},
                 {"data": "category"},
-                {"data": "qty"},
                 {"data": "cost"},
-                {"data": "unit"},
                 {"data": "price"},
+                {"data": "sale_price"},
+                {"data": "qty"},
                 {"data": "options"},
 
             ],

@@ -42,16 +42,17 @@ class ProductController extends Controller
     {
 
         $columns = array(
-            2 => 'name',
-            3 => 'code',
-            4 => 'supplier_id',
-            5 => 'supplier_sku_code',
-            6 => 'url',
-            7 => 'category_id',
-            8 => 'qty',
+            2 => 'image',
+            3 => 'name',
+            4 => 'code',
+            5 => 'supplier_id',
+            6 => 'supplier_sku_code',
+            7 => 'url',
+            8 => 'category_id',
             9 => 'cost',
-            10 => 'unit_id',
-            11 => 'price',
+            10 => 'price',
+            11 => 'sale_price',
+            12 => 'qty',
         );
 
         $totalData = Product::where('is_active', true)->count();
@@ -65,7 +66,7 @@ class ProductController extends Controller
         $order = 'products.' . $columns[$request->input('order.0.column')];
         $dir = $request->input('order.0.dir');
         if (empty($request->input('search.value'))) {
-            $products = Product::with('category', 'supplier', 'unit')
+            $products = Product::with('category', 'supplier')
                 ->offset($start)
                 ->where('is_active', true)
                 ->limit($limit)
@@ -74,7 +75,7 @@ class ProductController extends Controller
         } else {
             $search = $request->input('search.value');
             $products =  Product::select('products.*')
-                ->with('category', 'supplier', 'unit')
+                ->with('category', 'supplier')
                 ->leftJoin('categories', 'products.category_id', '=', 'categories.id')
                 ->leftJoin('suppliers', 'products.supplier_id', '=', 'suppliers.id')
                 ->where([
@@ -164,15 +165,15 @@ class ProductController extends Controller
                 $nestedData['image'] = '<img src="' . url('public/images/product', $product_image) . '" height="80" width="80">';
                 $nestedData['name'] = $product->name;
                 $nestedData['code'] = $product->code;
-
                 $nestedData['supplier'] = optional($product->supplier)->name;
-
                 $nestedData['supplier_sku'] = $product->supplier_sku_code;
                 $nestedData['url'] = $product->url;
                 //*to do; nu inteleg cum a facut legatura intre tabelul de $products si category fara sa foloseasca category_id;
                 $nestedData['category'] = optional($product->category)->name;
-                $nestedData['qty'] = $product->qty;
                 $nestedData['cost'] = $product->cost;
+                $nestedData['price'] = $product->price;
+                $nestedData['sale_price'] = $product->sale_price;
+                $nestedData['qty'] = $product->qty;
 
 
                 // am sters brand si de mai jos $nestedData;
