@@ -162,7 +162,7 @@ class ProductController extends Controller
                 $nestedData['key'] = $key;
                 $product_image = explode(",", $product->image);
                 $product_image = htmlspecialchars($product_image[0]);
-                $nestedData['image'] = '<img src="' . url('public/images/product', $product_image) . '" height="80" width="80">';
+                $nestedData['image'] = '<img src="' . url('/images/product/images', $product_image) . '" style="max-width: 100%;" >';
                 $nestedData['name'] = $product->name;
                 $nestedData['code'] = $product->code;
                 $nestedData['supplier'] = optional($product->supplier)->name;
@@ -245,19 +245,18 @@ class ProductController extends Controller
             $lims_product_list = Product::where([['is_active', true], ['type', 'standard']])->get();
             $lims_brand_list = Brand::where('is_active', true)->get();
             $lims_category_list = Category::where('is_active', true)->get();
+            $lims_supplier_list = Supplier::where('is_active', true)->get();
             $lims_unit_list = Unit::where('is_active', true)->get();
             $lims_tax_list = Tax::where('is_active', true)->get();
             $lims_warehouse_list = Warehouse::where('is_active', true)->get();
-            return view('product.create', compact('lims_product_list', 'lims_brand_list', 'lims_category_list', 'lims_unit_list', 'lims_tax_list', 'lims_warehouse_list'));
+            return view('product.create', compact('lims_product_list', 'lims_brand_list', 'lims_category_list', 'lims_supplier_list', 'lims_unit_list', 'lims_tax_list', 'lims_warehouse_list'));
         } else
             return redirect()->back()->with('not_permitted', 'Sorry! You are not allowed to access this module');
     }
 
     public function store(Request $request)
     {
-
-
-        logger('in store');
+        //logger('in store');
         $this->validate($request, [
             'code' => [
                 'max:255',
@@ -273,18 +272,18 @@ class ProductController extends Controller
             ]
         ]);
         $data = $request->except('image', 'file');
+        //logger($data);
         $data['name'] = htmlspecialchars(trim($data['name']));
-        if ($data['type'] == 'combo') {
-            $data['product_list'] = implode(",", $data['product_id']);
-            $data['qty_list'] = implode(",", $data['product_qty']);
-            $data['price_list'] = implode(",", $data['unit_price']);
-            $data['cost'] = $data['unit_id'] = $data['purchase_unit_id'] = $data['sale_unit_id'] = 0;
-        } elseif ($data['type'] == 'digital')
-            $data['cost'] = $data['unit_id'] = $data['purchase_unit_id'] = $data['sale_unit_id'] = 0;
+        // if ($data['type'] == 'combo') {
+        //     $data['product_list'] = implode(",", $data['product_id']);
+        //     $data['qty_list'] = implode(",", $data['product_qty']);
+        //     $data['price_list'] = implode(",", $data['unit_price']);
+        //     $data['cost'] = $data['unit_id'] = $data['purchase_unit_id'] = $data['sale_unit_id'] = 0;
+        // } elseif ($data['type'] == 'digital')
+        //     $data['cost'] = $data['unit_id'] = $data['purchase_unit_id'] = $data['sale_unit_id'] = 0;
 
         $data['product_details'] = str_replace('"', '@', $data['product_details']);
 
-        // dd($data);
 
         // if ($data['starting_date'])
         //     $data['starting_date'] = date('Y-m-d', strtotime($data['starting_date']));
@@ -353,22 +352,21 @@ class ProductController extends Controller
             // $lims_brand_list = Brand::where('is_active', true)->get();
             $lims_supplier_list = Supplier::where('is_active', true)->get();
             $lims_category_list = Category::where('is_active', true)->get();
+            $lims_supplier_list = Supplier::where('is_active', true)->get();
 
             $lims_unit_list = Unit::where('is_active', true)->get();
             // $lims_tax_list = Tax::where('is_active', true)->get();
             $lims_product_data = Product::where('id', $id)->first();
             // $lims_product_variant_data = $lims_product_data->variant()->orderBy('position')->get();
             // $lims_warehouse_list = Warehouse::where('is_active', true)->get();
-            return view('product.edit', compact('lims_product_list', 'lims_supplier_list', 'lims_category_list', 'lims_unit_list', 'lims_product_data'));
+            return view('product.edit', compact('lims_product_list', 'lims_supplier_list', 'lims_category_list', 'lims_supplier_list', 'lims_unit_list', 'lims_product_data'));
         } else
             return redirect()->back()->with('not_permitted', 'Sorry! You are not allowed to access this module');
     }
 
     public function updateProduct(Request $request)
     {
-
-        logger('productController');
-
+        //logger('productController');
 
         if (!env('USER_VERIFIED')) {
             \Session::flash('not_permitted', 'This feature is disable for demo!');

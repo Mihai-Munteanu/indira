@@ -150,13 +150,12 @@
     });
 
     function productDetails(product, imagedata) {
-       //console.log('productDetails', product);
 
+       //console.log('productDetails');
+       //console.log('productDetails', product);
        // product[11] = product[11].replace(/@/g, '"');
         htmltext = slidertext = '';
-
         htmltext = `
-            <p><strong>Image: </strong>${product.image}</p>
             <p><strong>Name: </strong>${product.name}</p>
             <p><strong>Sku Code: </strong>${product.code}</p>
             <p><strong>Supplier: </strong>${product.supplier}</p>
@@ -165,13 +164,16 @@
             <p><strong>Category: </strong>${product.category}</p>
             <p><strong>Cost: </strong>${product.cost}</p>
             <p><strong>Price: </strong>${product.price}</p>
-            <p><strong>Unit: </strong>${product.sale_price}</p>
+            <p><strong>Sale Price: </strong>${product.sale_price}</p>
             <p><strong>Stoks: </strong>${product.qty}</p>
             `
+//to do* de ajusat imaginea sa fie in mijloc;
+            if(product.image) {
+                var product_image = product.image.split(',');
 
-        if(product[17]) {
-            var product_image = product[17].split(",");
-            if(product_image.length > 1) {
+                if(product_image.length > 1) {
+                    console.log('>1');
+//to do* de moficat in cazul in care vor fi mai multe imagini pentru un singur produs;
                 slidertext = '<div id="product-img-slider" class="carousel slide" data-ride="carousel"><div class="carousel-inner">';
                 for (var i = 0; i < product_image.length; i++) {
                     if(!i)
@@ -182,7 +184,14 @@
                 slidertext += '</div><a class="carousel-control-prev" href="#product-img-slider" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#product-img-slider" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>';
             }
             else {
-                slidertext = '<img src="public/images/product/'+product[17]+'" height="300" width="100%">';
+                slidertext = `<div style="width-20px">${product.image}</div>`;
+            //{"data": "image", render: (data, type, row, meta) => {
+                    //console.log('in render', data, type, row, meta)
+
+                    //return `<div style="width:80px; height 80px;">${data}</div>`
+                //}},
+
+
             }
         }
 
@@ -195,6 +204,7 @@
         $(".product-variant-warehouse-list tbody").remove();
         $("#product-warehouse-section").addClass('d-none');
         $("#product-variant-warehouse-section").addClass('d-none');
+
         if(product[0] == 'combo') {
             $("#combo-header").text('<?php echo e(trans("file.Combo Products")); ?>');
             product_list = product[13].split(",");
@@ -294,17 +304,21 @@
                     all_permission: all_permission
                 },
                 dataType: "json",
-                type:"post"
+                type:"post",
             },
+
             "createdRow": function( row, data, dataIndex ) {
-                //console.log("data['product']->", data['product'], data)
                 $(row).addClass('product-link');
                 $(row).attr('data-product', JSON.stringify(data));
                 $(row).attr('data-imagedata', data['imagedata']);
             },
             "columns": [
                 {"data": "key"},
-                {"data": "image"},
+                {"data": "image", render: (data, type, row, meta) => {
+                    //console.log('in render', data, type, row, meta)
+
+                    return `<div style="width:80px; height 80px;">${data}</div>`
+                }},
                 {"data": "name"},
                 {"data": "code"},
                 {"data": "supplier"},

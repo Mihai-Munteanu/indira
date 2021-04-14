@@ -17331,3 +17331,1090 @@ Did you mean one of these?
 #44 /Users/mihai/.composer/vendor/laravel/valet/server.php(214): require('/Users/mihai/wo...')
 #45 {main}
 "} 
+[2021-04-13 11:46:55] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 01:16:04] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 01:16:06] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 01:16:09] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:37] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:46] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:46] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:46] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:46] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:46] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:48] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:48] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:48] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:48] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:07:48] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:23] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:23] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:23] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:23] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:23] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:24] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:24] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:24] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:24] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 02:24:24] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:27] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:29] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:29] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:29] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:29] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:29] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:29] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:30] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 15:22:32] local.ERROR: Undefined index: SERVER_PORT {"exception":"[object] (ErrorException(code: 0): Undefined index: SERVER_PORT at /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php:31)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Providers/AppServiceProvider.php(31): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 31, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(856): Illuminate\\Container\\Container->call(Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#8 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 24)
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(840): array_walk(Array, Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#14 /Users/mihai/work/practice/indira/salepropos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+"} 
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => '1572759415477product-page-fresh-breath.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => '1577165120189220px-Blue_Tshirt.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'iphoneX.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'lychee.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'SamsungGalaxyS9.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'Shoe.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:08:06] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => '1572759415477product-page-fresh-breath.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => '1577165120189220px-Blue_Tshirt.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'iphoneX.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'lychee.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'SamsungGalaxyS9.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'Shoe.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:08:24] local.INFO: here  
+[2021-04-14 16:08:24] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:09:10] local.INFO: here  
+[2021-04-14 16:09:10] local.INFO: array (
+  0 => '1572759415477product-page-fresh-breath.jpg',
+)  
+[2021-04-14 16:09:10] local.INFO: 1572759415477product-page-fresh-breath.jpg  
+[2021-04-14 16:09:10] local.INFO: here  
+[2021-04-14 16:09:10] local.INFO: array (
+  0 => '1577165120189220px-Blue_Tshirt.jpg',
+)  
+[2021-04-14 16:09:10] local.INFO: 1577165120189220px-Blue_Tshirt.jpg  
+[2021-04-14 16:09:10] local.INFO: here  
+[2021-04-14 16:09:10] local.INFO: array (
+  0 => 'iphoneX.jpg',
+)  
+[2021-04-14 16:09:10] local.INFO: iphoneX.jpg  
+[2021-04-14 16:09:10] local.INFO: here  
+[2021-04-14 16:09:10] local.INFO: array (
+  0 => 'lychee.jpg',
+)  
+[2021-04-14 16:09:10] local.INFO: lychee.jpg  
+[2021-04-14 16:09:10] local.INFO: here  
+[2021-04-14 16:09:10] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:09:10] local.INFO: potato.jpeg  
+[2021-04-14 16:09:10] local.INFO: here  
+[2021-04-14 16:09:10] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:09:10] local.INFO: potato.jpeg  
+[2021-04-14 16:09:11] local.INFO: here  
+[2021-04-14 16:09:11] local.INFO: array (
+  0 => 'SamsungGalaxyS9.jpg',
+)  
+[2021-04-14 16:09:11] local.INFO: SamsungGalaxyS9.jpg  
+[2021-04-14 16:09:11] local.INFO: here  
+[2021-04-14 16:09:11] local.INFO: array (
+  0 => 'Shoe.jpg',
+)  
+[2021-04-14 16:09:11] local.INFO: Shoe.jpg  
+[2021-04-14 16:09:11] local.INFO: here  
+[2021-04-14 16:09:11] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:09:11] local.INFO: toponemouse.jpg  
+[2021-04-14 16:09:11] local.INFO: here  
+[2021-04-14 16:09:11] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:09:11] local.INFO: toponemouse.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => '1572759415477product-page-fresh-breath.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: 1572759415477product-page-fresh-breath.jpg  
+[2021-04-14 16:09:43] local.INFO: 1572759415477product-page-fresh-breath.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => '1577165120189220px-Blue_Tshirt.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: 1577165120189220px-Blue_Tshirt.jpg  
+[2021-04-14 16:09:43] local.INFO: 1577165120189220px-Blue_Tshirt.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'iphoneX.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: iphoneX.jpg  
+[2021-04-14 16:09:43] local.INFO: iphoneX.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'lychee.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: lychee.jpg  
+[2021-04-14 16:09:43] local.INFO: lychee.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:09:43] local.INFO: potato.jpeg  
+[2021-04-14 16:09:43] local.INFO: potato.jpeg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'potato.jpeg',
+)  
+[2021-04-14 16:09:43] local.INFO: potato.jpeg  
+[2021-04-14 16:09:43] local.INFO: potato.jpeg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'SamsungGalaxyS9.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: SamsungGalaxyS9.jpg  
+[2021-04-14 16:09:43] local.INFO: SamsungGalaxyS9.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'Shoe.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: Shoe.jpg  
+[2021-04-14 16:09:43] local.INFO: Shoe.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: toponemouse.jpg  
+[2021-04-14 16:09:43] local.INFO: toponemouse.jpg  
+[2021-04-14 16:09:43] local.INFO: here  
+[2021-04-14 16:09:43] local.INFO: array (
+  0 => 'toponemouse.jpg',
+)  
+[2021-04-14 16:09:43] local.INFO: toponemouse.jpg  
+[2021-04-14 16:09:43] local.INFO: toponemouse.jpg  
+[2021-04-14 17:28:04] local.ERROR: Undefined index: type {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined index: type at /Users/mihai/work/practice/indira/salepropos/app/Http/Controllers/ProductController.php:277)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/app/Http/Controllers/ProductController.php(277): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mihai/wo...', 277, Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\ProductController->store(Object(Illuminate\\Http\\Request))
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('store', Array)
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProductController), 'store')
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(681): Illuminate\\Routing\\Route->run()
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /Users/mihai/work/practice/indira/salepropos/app/Http/Middleware/Active.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\Active->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(43): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(77): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(683): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(624): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(613): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /Users/mihai/work/practice/indira/salepropos/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#42 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#43 /Users/mihai/work/practice/indira/salepropos/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#44 /Users/mihai/.composer/vendor/laravel/valet/server.php(214): require('/Users/mihai/wo...')
+#45 {main}
+"} 
+[2021-04-14 17:38:21] local.ERROR: syntax error, unexpected 'name' (T_STRING) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected 'name' (T_STRING) at /Users/mihai/work/practice/indira/salepropos/app/Http/Controllers/ProductController.php:166)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/Users/mihai/wo...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('App\\\\Http\\\\Contro...')
+#2 [internal function]: spl_autoload_call('App\\\\Http\\\\Contro...')
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(803): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(681): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(785): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array, true)
+#6 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Container/Container.php(629): Illuminate\\Foundation\\Application->resolve('App\\\\Http\\\\Contro...', Array)
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(770): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#8 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(233): Illuminate\\Foundation\\Application->make('App\\\\Http\\\\Contro...')
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(833): Illuminate\\Routing\\Route->getController()
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(794): Illuminate\\Routing\\Route->controllerMiddleware()
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(694): Illuminate\\Routing\\Route->gatherMiddleware()
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(674): Illuminate\\Routing\\Router->gatherRouteMiddleware(Object(Illuminate\\Routing\\Route))
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#14 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(624): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#15 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(613): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#16 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#17 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /Users/mihai/work/practice/indira/salepropos/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#30 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#31 /Users/mihai/work/practice/indira/salepropos/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#32 /Users/mihai/.composer/vendor/laravel/valet/server.php(214): require('/Users/mihai/wo...')
+#33 {main}
+"} 
+[2021-04-14 18:43:38] local.ERROR: Method App\Http\Controllers\ProductController::updpateProduct does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\ProductController::updpateProduct does not exist. at /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Controller.php:68)
+[stacktrace]
+#0 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): Illuminate\\Routing\\Controller->__call('updpateProduct', Array)
+#1 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('updpateProduct', Array)
+#2 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProductController), 'updpateProduct')
+#3 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#4 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(681): Illuminate\\Routing\\Route->run()
+#5 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 /Users/mihai/work/practice/indira/salepropos/app/Http/Middleware/Active.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\Active->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(43): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#12 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(77): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#14 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(683): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#24 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#25 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(624): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#26 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(613): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#27 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#28 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(63): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Users/mihai/work/practice/indira/salepropos/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 /Users/mihai/work/practice/indira/salepropos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#42 /Users/mihai/work/practice/indira/salepropos/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#43 /Users/mihai/.composer/vendor/laravel/valet/server.php(214): require('/Users/mihai/wo...')
+#44 {main}
+"} 
+[2021-04-14 19:59:46] local.DEBUG: array (
+  'name' => NULL,
+  'code' => 'f7',
+  'supplier_id' => NULL,
+  'supplier' => NULL,
+  'supplier_sku_code' => '12312312',
+  'url' => NULL,
+  'category_id' => NULL,
+  'cost' => NULL,
+  'price' => NULL,
+  'sale_price' => NULL,
+  'product_details' => NULL,
+)  
